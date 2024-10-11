@@ -59,7 +59,21 @@ cd NFC_harvester_battery_free/data/charging/
 python3 plot_charging_traces.py
 ```   
 
-2. **Figure 6 (a,b,c): Power and Lifetime** TODO
+2. **Figure 6 (a,b,c): Power and Lifetime** Run the `math_model_life.py' script
+
+Set the below variables to True, based on the desired output
+```
+PLOT_CAPS = True
+PLOT_CURRENT = False
+PLOT_START_VOLTAGE = False
+```
+
+```bash
+cd NFC_harvester_battery_free/data/charging/
+python3 math_model_life.py
+```   
+
+
 3. **Figure 7: Example data from all sensors** Run the `plot_pretty_manually.py` script
 
 ```bash
