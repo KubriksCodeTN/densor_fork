@@ -1,0 +1,203 @@
+*************************************************************
+FileName = Dental Sensor V400 - Panel.GBR
+AutoAperture = True
+*************************************************************
+Generating : Top Layer
+      File : Dental Sensor V400 - Panel.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : Dental Sensor V400 - Panel.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D13
+    D35
+    D36
+    D37
+    D38
+*************************************************************
+
+*************************************************************
+Generating : Flex Stack Top Overlay
+      File : Dental Sensor V400 - Panel.GTO
+
+    Adding Layer      : Flex Stack Top Overlay
+
+
+Used DCodes :
+    D13
+    D39
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : Dental Sensor V400 - Panel.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D15
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D29
+    D33
+    D34
+    D40
+*************************************************************
+
+*************************************************************
+Generating : Flex Stack Top Coverlay
+      File : Dental Sensor V400 - Panel.GTS
+
+    Adding Layer      : Flex Stack Top Coverlay
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D17
+    D20
+    D25
+    D26
+    D27
+    D28
+    D33
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+*************************************************************
+
+*************************************************************
+Generating : Flex Stack Bottom Coverlay
+      File : Dental Sensor V400 - Panel.GBS
+
+    Adding Layer      : Flex Stack Bottom Coverlay
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D60
+    D61
+    D62
+*************************************************************
+
+*************************************************************
+Generating : Board Shape
+      File : Dental Sensor V400 - Panel.GM1
+
+    Adding Layer      : Board Shape
+
+
+Used DCodes :
+    D13
+    D63
+    D64
+    D65
+*************************************************************
+
+*************************************************************
+Generating : Assembly Notes
+      File : Dental Sensor V400 - Panel.GM2
+
+    Adding Layer      : Assembly Notes
+
+
+Used DCodes :
+    D63
+    D64
+    D65
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : Dental Sensor V400 - Panel.GD1
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D65
+    D66
+    D67
+    D68
+*************************************************************
+

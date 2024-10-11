@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/menu_st25tn_features">
+        <menu>
+            <item
+                android:id="@+id/memory_dump"
+                android:icon="@drawable/ic_memory_black_24dp"
+                android:title="@string/memory_content"/>
+
+            <item
+                android:id="@+id/andef_menu"
+                android:icon="@drawable/ic_playlist_play_black_24dp"
+                android:title="@string/augmented_ndef" />
+
+            <item
+                android:id="@+id/register_management"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="@string/register_management"/>
+
+            <item
+                android:id="@+id/kill_menu"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/kill_tag" />
+
+            <item
+                android:id="@+id/lock_menu"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="@string/locks"/>
+            <item
+                android:id="@+id/app_launcher"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/app_launcher"/>
+        </menu>
+    </item>
+
+
+</menu>

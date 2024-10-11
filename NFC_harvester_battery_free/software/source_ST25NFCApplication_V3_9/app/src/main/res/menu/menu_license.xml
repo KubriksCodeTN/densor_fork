@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/menu_license" >
+        <menu>
+            <item
+                android:id="@+id/license"
+                android:icon="@drawable/ic_help_outline_black_24dp"
+                android:title="@string/view_license"/>
+        </menu>
+    </item>
+
+</menu>

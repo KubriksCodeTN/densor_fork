@@ -1,0 +1,166 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/densor_time_sync"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:textSize="17sp"
+                            android:text="@string/sensor_enable"/>
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/densor_settings_se_rc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:checked="true"
+                            android:text="@string/rc_enabled_xt_disabled_rtc_clock_select" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/densor_settings_se_temp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:checked="true"
+                            android:text="@string/temperature" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/densor_settings_se_pd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:checked="true"
+                            android:text="@string/photodiode" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/densor_settings_se_accel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:checked="true"
+                            android:text="@string/accelerometer" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/densor_settings_se_future1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:visibility="invisible"
+                            android:text="@string/future1" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/densor_settings_se_future2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:visibility="invisible"
+                            android:text="@string/future2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:layout_marginTop="30dp"
+                            android:text="@string/rtc_interval"/>
+
+                        <RadioGroup
+                            android:id="@+id/densor_settings_som"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/densor_settings_som_sec"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:text="@string/seconds" />
+
+                                <RadioButton
+                                    android:id="@+id/densor_settings_som_min"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/minutes" />
+
+                        </RadioGroup>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:text="@string/interval"/>
+
+                                <EditText
+                                    android:id="@+id/densor_settings_int_in"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:ems="2"
+                                    android:inputType="number"
+                                    android:text="@string/_45"/>
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="15dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:text="@string/startup_delay"/>
+
+                                <EditText
+                                    android:id="@+id/densor_settings_startup_delay"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:ems="3"
+                                    android:text="@string/_0"
+                                    android:inputType="number" />
+
+                        </LinearLayout>
+
+
+                        <Button
+                            android:id="@+id/densor_settings_update"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/update_2"/>
+
+                        <TextView
+                            android:id="@+id/densor_settings_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"/>
+
+                </LinearLayout>
+        </ScrollView>
+
+
+</LinearLayout>

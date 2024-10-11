@@ -1,0 +1,295 @@
+/** @cond EPC_CODING_DOC */
+/**
+ * @mainpage NHS31xx UCode-I2C EPC coding
+ *
+ * @section epc_mainpage_introduction Introduction
+ * When an NHS31xx IC is combined with the UCode-I2C IC, using either the I2C HW block or the bit-banging
+ * module @em i2cbbm, the current status of an ongoing monitoring session can eb communicated through the EPC code
+ * stored in the UCode-I2C chip.
+ * Currently, two boards make use of this:
+ * - The NFC RfID - Rain RFiD combo solution running the application firmware from @em app_demo_dpu_tloggerucode
+ * - The Sensor Board running the application firmware from @em app_demo_dpahu_sensormonitor
+ * The decomposition of the EPC code into the different types of information is described here.
+ *
+ * @note @em Only the 12-byte EPC code is adapted. The UCode-I2c also sports a User Memory bank, but the current demo
+ *  firmware applications do not make use of this. A production application can use this to store extra fixed or
+ *  slowly-changing information such as the first @em n excursions, or statistical information of the captured data,
+ *  and so on.
+ *
+ * @warning
+ *  - The ICs have not been designed with mutual compatibility in mind. The UCode-I2C chip cannot activate both
+ *      interfaces - UHF and I2C - at the same time; and the NHS3100 chip cannot be started by the UCode-I2C chip.
+ *      Full bi-directional communication is therefore not possible when the power-off mode is to be used. @n
+ *      When the NHS3100 IC only uses active, sleep, Deep sleep, and deep power down modes, it is possible to have the 
+ *      IC wake up each time new data is written by an UHF reader in the UCode-I2C chip. Technically, this makes it 
+ *      possible to set up a bi-directional communication channel. In practice, this is not feasible. Apart from
+ *      throughput times being very low, there is no possibility for a proper synchronization mechanism.
+ *      Each synchronization error necessitates a complete communication restart from both sides, due to the way the
+ *      UCode-I2C handles simultaneous read/write access via the I2C interface and the wireless UHF interface.
+ *      As a result, a full data readout implementation would provide, at best, a slow, error prone, and unstable
+ *      operation.
+ *  - When the status changes, the EPC code cannot be updated for as long as the label is present in the UHF field.
+ *      The NHS3100 IC will postpone updating the EPC code when it detects the unavailability of the I2C bus: it will
+ *      try again during the next active period of the chip.
+ *      The exact timing of an update is thus dependent on the location of the label - near a UHF gate or not -
+ *      @em and on the measurement interval of the monitoring session on the NHS3100 chip.
+ *  -  Both UHF reader and NHS3100 can use the non-volatile memory of the UCode-I2C chip to convey information, each at
+ *      distinct moments when each side can have exclusive access to the IC.
+ *      - Typical information that could be conveyed from tag to host: label information, status reports,
+ *          specific statistical information, the first @em n excursions, ... 
+ *      - Typical information that could be conveyed from host to tag: handover data including timestamp, owner IDs,
+ *          geolocation data, ...
+ *
+ * @section epc_mainpage_breakdown EPC breakdown
+ *  The 12 bytes EPC code are divided in two blocks: the first block of 8 bytes conveys the NFC ID; the second block
+ *  conveys the status information.
+ *  - The 8 LSB bits of the 4th 16-bit word are always 0. There are just 7 bytes in the 4 16-bit words that carry the
+ *      NFC ID.
+ *  - The status information includes a @em version indicator @c 'T' and a bitmask of 3 bytes @c AABBCCh.
+ *      They are written by the ARM as
+ *      @code
+ *          [byte #8] CCh
+ *          [byte #9] BBh
+ *          [byte #10] AAh
+ *          [byte #11] 'T' == 54h
+ *      @endcode
+ *      thus ending up in the 16-bit words as:
+ *      @code
+ *          [word #4] BBCCh
+ *          [word #5] 54AAh
+ *      @endcode
+ *
+ *  The interpretation of the byte sequence is described in the diagram below:
+ *  @dot
+ *      digraph "NFC communication layering" {
+ *          node [fontsize = "14" shape = "box"];
+ *          rankdir="TB"
+ *          edge [];
+ *          graph [ranksep="1", nodesep="0.5"];
+ *
+ *          subgraph a {
+ *              rank=same
+ *              "payload label" [label = "payload" style = dashed];
+ *              node [shape=plaintext]
+ *              "payload" [label=<
+ *                                  <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+ *                                  <TR>
+ *                                  <TD PORT="f0">7 bytes<br/>NFC ID</TD>
+ *                                  <TD PORT="f1">3 bytes<br/>status</TD>
+ *                                  </TR>
+ *                                  </TABLE>>];
+ *          }
+ *
+ *          subgraph b {
+ *              rank=same
+ *              "NFC ID label" [label = "NFC ID" style = dashed];
+ *              node [shape=plaintext]
+ *              "NFC ID" [label=<
+ *                                  <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+ *                                  <TR>
+ *                                  <TD PORT="f0">#0</TD>
+ *                                  <TD PORT="f1">#1</TD>
+ *                                  <TD PORT="f2">#2</TD>
+ *                                  <TD PORT="f3">#3</TD>
+ *                                  <TD PORT="f4">#4</TD>
+ *                                  <TD PORT="f5">#5</TD>
+ *                                  <TD PORT="f6">#6</TD>
+ *                                  <TD PORT="f7">00h</TD>
+ *                                  </TR>
+ *                                  </TABLE>>];
+ *
+ *              
+ *              node [shape=box]
+ *              "status label" [label = "status" style = "dashed"];
+ *              node [shape=plaintext]
+ *              "status" [label=<
+ *                                  <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+ *                                  <TR>
+ *                                  <TD PORT="f0">#0<br/>LSB</TD>
+ *                                  <TD PORT="f1">#1<br/>.</TD>
+ *                                  <TD PORT="f2">#2<br/>MSB</TD>
+ *                                  <TD PORT="f3">#3<br/>'T'</TD>
+ *                                  </TR>
+ *                                  </TABLE>>];
+ *          }
+ *
+ *          subgraph c {
+ *              rank=same
+ *              "EPC label" [label = "EPC code" style = dashed];
+ *              node [shape=plaintext]
+ *              "EPC" [label=<
+ *                                  <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+ *                                  <TR>
+ *                                  <TD PORT="f0">#0<br/>MSB</TD>
+ *                                  <TD PORT="f1">#0<br/>LSB</TD>
+ *                                  <TD PORT="f2">#1<br/>MSB</TD>
+ *                                  <TD PORT="f3">#1<br/>LSB</TD>
+ *                                  <TD PORT="f4">#2<br/>MSB</TD>
+ *                                  <TD PORT="f5">#2<br/>LSB</TD>
+ *                                  <TD PORT="f6">#3<br/>MSB</TD>
+ *                                  <TD PORT="f7">#3<br/>LSB</TD>
+ *                                  <TD PORT="f8">#4<br/>MSB</TD>
+ *                                  <TD PORT="f9">#4<br/>LSB</TD>
+ *                                  <TD PORT="f10">#5<br/>MSB</TD>
+ *                                  <TD PORT="f11">#5<br/>LSB</TD>
+ *                                  </TR>
+ *                                  </TABLE>>];
+ *          }
+ *
+ *          "payload label" -> "payload" [id = 100, style = dashed, dir = none]
+ *          "EPC label" -> "EPC" [id = 100, style = dashed, dir = none]
+ *          "NFC ID label" -> "NFC ID" [id = 100, style = dashed, dir = none]
+ *          "status label" -> "status" [id = 100, style = dashed, dir = none]
+ *
+ *          "payload":f0 -> "NFC ID" [id = 0];
+ *          "payload":f1 -> "status" [id = 0];
+ *
+ *          "NFC ID":f0 -> "EPC":f0 [id = 0];
+ *          "NFC ID":f1 -> "EPC":f1 [id = 0];
+ *          "NFC ID":f2 -> "EPC":f2 [id = 0];
+ *          "NFC ID":f3 -> "EPC":f3 [id = 0];
+ *          "NFC ID":f4 -> "EPC":f4 [id = 0];
+ *          "NFC ID":f5 -> "EPC":f5 [id = 0];
+ *          "NFC ID":f6 -> "EPC":f6 [id = 0];
+ *          "NFC ID":f7 -> "EPC":f7 [id = 0];
+ *          "status":f0 -> "EPC":f9 [id = 0];
+ *          "status":f1 -> "EPC":f8 [id = 0];
+ *          "status":f2 -> "EPC":f11 [id = 0];
+ *          "status":f3 -> "EPC":f10 [id = 0];
+ *      }
+ *  @enddot
+ *  @n
+ *
+ * @note A valid sequence @b must have:
+ *  - @c 00h at position #3 LSB
+ *  - @c 54h at position #5 MSB
+ *
+ * The status is to be interpreted as a bitmask, containing all the events that occurred. The status events that are no
+ * longer applicable may still be set; in case of conflicting information, the highest bit set indicates the correct
+ * current status. All possible events are listed in #UCODE_EVENT_T.
+ *
+ * @section epc_mainpage_example Example
+ *
+ *  An EPC code read out by a UHF reader may read @code 04E8810008063D00000F5400 @endcode
+ *  This is to be grouped as @code 04:E8:81:00:08:06:3D 00 000F 5400 @endcode
+ *  which gives
+ *  - @code 04:E8:81:00:08:06:3D @endcode as NFC ID, and
+ *  - @code 0x00000F @endcode as status.
+ *
+ *  The four bits set in the status can be looked up in #UCODE_EVENT_T. In this case, #UCODE_EVENT_PRISTINE,
+ *  #UCODE_EVENT_CONFIGURED and #UCODE_EVENT_STARTING are to be ignored; the current status is #UCODE_EVENT_LOGGING.
+ */
+
+/** @defgroup UCODE_EVENT UCODE_EVENT
+ * @{
+ */
+
+/**
+ * The different events that can occur and are tracked.
+ * - All events that indicate a failure or achievement provide information can co-exist.
+ * - All events that indicate a state change remain set even when they are superseded with a new state change:
+ *  e.g. #UCODE_EVENT_PRISTINE will remain set after being configured, indicated by bit @c UCODE_EVENT_CONFIGURED.
+ * @note This enumeration is shared across multiple demo firmware applications; not all events listed here may be
+ *  applicable.
+ */
+typedef enum UCODE_EVENT {
+    /** @c 0x0000&nbsp;0001 @n State change: the IC does not have or no longer has a configuration and contains no data. */
+    UCODE_EVENT_PRISTINE = 1 << 0,
+
+    /**
+     * @c 0x0000&nbsp;0002 @n
+     * State change: the IC is configured, but requires a start trigger to start.
+     */
+    UCODE_EVENT_CONFIGURED = 1 << 1,
+
+    /** @c 0x0000&nbsp;0004 @n State change: the IC is configured and will make a first measurement after a delay. */
+    UCODE_EVENT_STARTING = 1 << 2,
+
+    /** @c 0x0000&nbsp;0008 @n State change: the IC is configured and is logging. At least one sample is available. */
+    UCODE_EVENT_LOGGING = 1 << 3,
+
+    /** @c 0x0000&nbsp;0010 @n State change: the IC is configured and has been logging. Now it has stopped logging. */
+    UCODE_EVENT_STOPPED = 1 << 4,
+
+    /** @c 0x0000&nbsp;0020 @n Failure: at least one temperature was strictly higher than the valid maximum value. */
+    UCODE_EVENT_TEMPERATURE_TOO_HIGH = 1 << 5,
+
+    /** @c 0x0000&nbsp;0040 @n Failure: at least one temperature was strictly lower than the valid minimum value. */
+    UCODE_EVENT_TEMPERATURE_TOO_LOW  = 1 << 6,
+
+    /** @c 0x0000&nbsp;0080 @n Failure: a brown-out is about to occur or has occurred. Battery is (nearly) depleted. */
+    UCODE_EVENT_BOD = 1 << 7,
+
+    /** @c 0x0000&nbsp;0100 @n Failure: logging has stopped because no more free space is available to store samples. */
+    UCODE_EVENT_FULL = 1 << 8,
+
+    /**
+     * @c 0x0000&nbsp;0200 @n
+     * Achievement: logging has stopped. The logging time was restricted and has been reached: the time spent logging
+     * has exceeded the non-zero value, set as part of the configuration.
+     */
+    UCODE_EVENT_EXPIRED = 1 << 9,
+
+    /**
+     * @c 0x0000&nbsp;0400 @n
+     * Temporary error: The application could not successfully communicate using I2C with an external sensor.
+     * Possible causes are
+     * - a bad connection: this may indicate problems in the layout and manufacturing of the product.
+     * - a power failure: this may indicate problems in the power supply of the external sensor / IC.
+     * - a concurrency problem: this may indicate synchronization problems, as the external sensor / IC could not reply.
+     * Depending on environmental conditions this problem is likely to be temporary. When I2C communication is
+     * successful next time, this bit is cleared again.
+     */
+    UCODE_EVENT_I2C_ERROR = 1 << 10,
+
+    /**
+     * @c 0x0000&nbsp;0800 @n
+     * Temporary error: The application could not successfully communicate using SPI with an external sensor.
+     * Possible causes are
+     * - a bad connection: this may indicate problems in the layout and manufacturing of the product.
+     * - a power failure: this may indicate problems in the power supply of the external sensor / IC.
+     * - a concurrency problem: this may indicate synchronization problems, as the external sensor / IC could not reply.
+     * Depending on environmental conditions this problem is likely to be temporary. When SPI communication is
+     * successful next time, this bit is cleared again.
+     */
+    UCODE_EVENT_SPI_ERROR = 1 << 11,
+
+    /** @c 0x0000&nbsp;1000 @n Storage condition notification: the product has received a shock. */
+    UCODE_EVENT_SHOCK = 1 << 12,
+
+    /** @c 0x0000&nbsp;2000 @n Storage condition notification: the product has been shaken with. */
+    UCODE_EVENT_SHAKE = 1 << 13,
+
+    /** @c 0x0000&nbsp;4000 @n Storage condition notification: the product has detected a vibration. */
+    UCODE_EVENT_VIBRATION = 1 << 14,
+
+    /** @c 0x0000&nbsp;8000 @n Storage condition notification: the product has detected a tilt. */
+    UCODE_EVENT_TILT = 1 << 15,
+
+    /** @c 0x0001&nbsp;0000 @n Storage condition notification: the product is configured to detect shocks. */
+    UCODE_EVENT_SHOCK_CONFIGURED = 1 << 16,
+
+    /** @c 0x0002&nbsp;0000 @n Storage condition notification: the product is configured to detect shaking. */
+    UCODE_EVENT_SHAKE_CONFIGURED = 1 << 17,
+
+    /** @c 0x0004&nbsp;0000 @n Storage condition notification: the product is configured to detect vibrations. */
+    UCODE_EVENT_VIBRATION_CONFIGURED = 1 << 18,
+
+    /** @c 0x0008&nbsp;0000 @n Storage condition notification: the product is configured to detect tilts. */
+    UCODE_EVENT_TILT_CONFIGURED = 1 << 19,
+
+    /** @c 0x0010&nbsp;0000 @n Storage condition notification: the product is configured to detect humidity. */
+    EVENT_TAG_HUMIDITY_CONFIGURED = 1 << 20,
+    
+    /** @c 0x0020&nbsp;0000 @n Failure: at least one humidity measurement was strictly higher than the valid maximum value. */
+    EVENT_TAG_HUMIDITY_TOO_HIGH = 1 << 21,
+    
+    /** @c 0x0040&nbsp;0000 @n Failure: at least one humidity measurement was strictly lower than the valid minimum value. */
+    EVENT_TAG_HUMIDITY_TOO_LOW = 1 << 22,
+    
+    /** @c 23 @n Number of possible events. Not to be used as a possible event. Use this in for loops or to define array sizes. */
+    UCODE_EVENT_COUNT = 23
+} UCODE_EVENT_T;
+
+/** @} */
+/** @endcond */

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".type2.st25tn.ST25TNChangeMemConfActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/column1Layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="42"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="@string/memory_configuration2" />
+
+            <RadioGroup
+                android:id="@+id/memConfRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headerTextView"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/defaultModeRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="2dp"
+                    android:checked="true"
+                    android:text="@string/default_mode"
+                    android:textStyle="bold"
+                    android:textColor="@color/st_dark_blue" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left"
+                    android:text="@string/default_mode_description" />
+
+                <RadioButton
+                    android:id="@+id/extendedMode1RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="2dp"
+                    android:checked="false"
+                    android:text="@string/extended_mode1"
+                    android:textStyle="bold"
+                    android:textColor="@color/st_dark_blue" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left"
+                    android:text="@string/extended_mode1_description" />
+
+                <RadioButton
+                    android:id="@+id/extendedMode2RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="2dp"
+                    android:checked="false"
+                    android:text="@string/extended_mode2"
+                    android:textStyle="bold"
+                    android:textColor="@color/st_dark_blue" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left"
+                    android:text="@string/extended_mode2_description" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="2dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/st_light_purple"
+                android:text="@string/warning_about_t2t_mem_conf" />
+
+            <Button
+                android:id="@+id/checkTlvButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/light_blue_round_area"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:text="@string/check_tlvs"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/column2Layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="16"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:id="@+id/areaRectanglesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/t2tHeaderTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/st_dark_blue"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t2t_header"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tlvsAreaTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/st_light_purple"
+                    android:gravity="center_horizontal"
+                    android:text="@string/tlvs_area"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/systemArea1TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/st_light_green"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t2t_system_area"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/systemArea2TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/st_light_green"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t2t_system_area"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/systemArea3TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/st_light_green"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t2t_system_area"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/column3Layout"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            android:layout_weight="12"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/bracketImageView"
+                    android:layout_width="14dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bracket" />
+
+                <TextView
+                    android:id="@+id/t2tAreaSizeTextView"
+                    android:layout_width="38dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="center"
+                    android:text="@string/t2t_area"/>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/summaryZoneLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:background="@color/white">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/st_light_blue">
+
+            <TextView
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:text="@string/size_in_bytes"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:text="@string/size_in_blocks"
+                android:layout_weight="1"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:text="@string/t2t_header"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/t2tHeaderSizeInBytesTextView"
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/t2tHeaderSizeInBlocksTextView"
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/st_very_light_blue">
+
+            <TextView
+                android:text="@string/tlvs_area"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/t2tAreaSizeInBytesTextView"
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/t2tAreaSizeInBlocksTextView"
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:text="@string/t2t_system_area"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/systemAreaSizeInBytesTextView"
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/systemAreaSizeInBlocksTextView"
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/st_very_light_blue">
+
+            <TextView
+                android:text="@string/TOTAL"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/totalSizeInBytesTextView"
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/totalSizeInBlocksTextView"
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center"/>
+        </TableRow>
+
+    </TableLayout>
+
+ </LinearLayout>

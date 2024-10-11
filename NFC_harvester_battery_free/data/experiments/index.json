@@ -1,0 +1,3400 @@
+{
+    "2024-03-26-p1-e-1.bin": {
+        "pid": 1,
+        "description": "first attempt",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ],
+            [
+                "Speaking",
+                30
+            ]
+        ],
+        "filename": "2024-03-26-p1-e-1.bin",
+        "datetime": "2024-03-26, 11:30:01",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1711448841,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2739
+        }
+    },
+    "2024-03-26-p1-e-2.bin": {
+        "pid": 1,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ],
+            [
+                "Speaking",
+                30
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ]
+        ],
+        "filename": "2024-03-26-p1-e-2.bin",
+        "datetime": "2024-03-26, 17:57:45",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1711472109,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2199
+        }
+    },
+    "2024-03-27-p0-e-1.bin": {
+        "pid": 0,
+        "description": "blinds closed and lights off",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Walk around with densor in hand",
+                60
+            ],
+            [
+                "Walk around with densor in bag",
+                60
+            ],
+            [
+                "Densor laying flat stay away",
+                60
+            ]
+        ],
+        "filename": "2024-03-27-p0-e-1.bin",
+        "datetime": "2024-03-27, 17:09:58",
+        "notes": "bag was replaced by wrapping in paper napkin",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1711555564,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2659
+        }
+    },
+    "2024-03-27-p0-e-2.bin": {
+        "pid": 0,
+        "description": "blinds closed and lights on",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Walk around with densor in hand",
+                60
+            ],
+            [
+                "Densor laying flat stay away",
+                60
+            ],
+            [
+                "Walk around with densor in bag",
+                60
+            ]
+        ],
+        "filename": "2024-03-27-p0-e-2.bin",
+        "datetime": "2024-03-27, 17:30:37",
+        "notes": "bag replaced with paper napkin",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1711556805,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2859
+        }
+    },
+    "2024-04-05-p1-e-1.bin": {
+        "pid": 1,
+        "description": "rerun 1",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Sleep head up",
+                30
+            ],
+            [
+                "Sleep head left",
+                30
+            ],
+            [
+                "Sleep head up",
+                30
+            ],
+            [
+                "Sleep head right",
+                30
+            ],
+            [
+                "Sleep head left",
+                30
+            ],
+            [
+                "Sleep head right",
+                30
+            ]
+        ],
+        "filename": "2024-04-05-p1-e-1.bin",
+        "datetime": "2024-04-05, 10:26:56",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1712305395,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2599
+        }
+    },
+    "2024-04-05-p1-e-2.bin": {
+        "pid": 1,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Sleep head left",
+                30
+            ],
+            [
+                "Sleep head right",
+                30
+            ],
+            [
+                "Sleep head up",
+                30
+            ],
+            [
+                "Sleep head right",
+                30
+            ],
+            [
+                "Sleep head up",
+                30
+            ],
+            [
+                "Sleep head left",
+                30
+            ]
+        ],
+        "filename": "2024-04-05-p1-e-2.bin",
+        "datetime": "2024-04-05, 10:36:51",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1712305991,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2959
+        }
+    },
+    "2024-04-16-p2-e-1.bin": {
+        "pid": 2,
+        "description": "first experiment ever",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Speaking",
+                30
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ]
+        ],
+        "filename": "2024-04-16-p2-e-1.bin",
+        "datetime": "2024-04-16, 14:57:58",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713272100,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 3369
+        }
+    },
+    "2024-04-16-p2-e-2.bin": {
+        "pid": 2,
+        "description": "redone for wrong settings",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ],
+            [
+                "Speaking",
+                30
+            ]
+        ],
+        "filename": "2024-04-16-p2-e-2.bin",
+        "datetime": "2024-04-16, 16:17:54",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713276919,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2039
+        }
+    },
+    "2024-04-16-p3-e-1.bin": {
+        "pid": 3,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Speaking",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ]
+        ],
+        "filename": "2024-04-16-p3-e-1.bin",
+        "datetime": "2024-04-16, 15:14:43",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 154433689,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2379
+        }
+    },
+    "2024-04-16-p3-e-2.bin": {
+        "pid": 3,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ],
+            [
+                "Speaking",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ]
+        ],
+        "filename": "2024-04-16-p3-e-2.bin",
+        "datetime": "2024-04-16, 15:35:51",
+        "notes": "None",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713274403,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 4479
+        }
+    },
+    "2024-04-16-p3-e-3.bin": {
+        "pid": 3,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ],
+            [
+                "Speaking",
+                30
+            ]
+        ],
+        "filename": "2024-04-16-p3-e-3.bin",
+        "datetime": "2024-04-16, 15:59:54",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713275847,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2849
+        }
+    },
+    "2024-04-16-p3-e-4.bin": {
+        "pid": 3,
+        "description": "at home",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ],
+            [
+                "Speaking",
+                30
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ]
+        ],
+        "filename": "2024-04-16-p3-e-4.bin",
+        "datetime": "2024-04-16, 20:18:18",
+        "notes": "wispering during speaking task",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713291342,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2569
+        }
+    },
+    "2024-04-16-p3-e-5.bin": {
+        "pid": 3,
+        "description": "at home",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ],
+            [
+                "Speaking",
+                30
+            ]
+        ],
+        "filename": "2024-04-16-p3-e-5.bin",
+        "datetime": "2024-04-16, 20:24:48",
+        "notes": "wispering during speaking task",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713291733,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2699
+        }
+    },
+    "2024-04-16-p3-e-6.bin": {
+        "pid": 3,
+        "description": "at home",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Sleep head left",
+                30
+            ],
+            [
+                "Sleep head up",
+                30
+            ],
+            [
+                "Sleep head up",
+                30
+            ],
+            [
+                "Sleep head left",
+                30
+            ],
+            [
+                "Sleep head right",
+                30
+            ],
+            [
+                "Sleep head right",
+                30
+            ]
+        ],
+        "filename": "2024-04-16-p3-e-6.bin",
+        "datetime": "2024-04-16, 20:37:47",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713292449,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 3319
+        }
+    },
+    "2024-04-17-p3-e-1.bin": {
+        "pid": 3,
+        "description": "at home",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ],
+            [
+                "Speaking",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ]
+        ],
+        "filename": "2024-04-17-p3-e-1.bin",
+        "datetime": "2024-04-17, 13:01:53",
+        "notes": "forgot water. Ran down stairs to grab. Just in time to drink",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713351547,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2509
+        }
+    },
+    "2024-04-17-p3-e-2.bin": {
+        "pid": 3,
+        "description": "at home",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ],
+            [
+                "Speaking",
+                30
+            ]
+        ],
+        "filename": "2024-04-17-p3-e-2.bin",
+        "datetime": "2024-04-17, 13:07:46",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713351913,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2479
+        }
+    },
+    "2024-04-17-p3-e-3.bin": {
+        "pid": 3,
+        "description": "at office",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ],
+            [
+                "Speaking",
+                30
+            ]
+        ],
+        "filename": "2024-04-17-p3-e-3.bin",
+        "datetime": "2024-04-17, 14:37:53",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713357325,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 3119
+        }
+    },
+    "2024-04-17-p3-e-4.bin": {
+        "pid": 3,
+        "description": "at office",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Speaking",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ]
+        ],
+        "filename": "2024-04-17-p3-e-4.bin",
+        "datetime": "2024-04-17, 14:49:01",
+        "notes": "p1 distracting a bit",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713357990,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 3329
+        }
+    },
+    "2024-04-17-p3-e-5.bin": {
+        "pid": 3,
+        "description": "using I2",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Speaking",
+                30
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ]
+        ],
+        "filename": "2024-04-17-p3-e-5.bin",
+        "datetime": "2024-04-17, 15:20:06",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713359861,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2669
+        }
+    },
+    "2024-04-17-p3-e-6.bin": {
+        "pid": 3,
+        "description": "using I2",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-17-p3-e-6.bin",
+        "datetime": "2024-04-17, 15:41:52",
+        "notes": "started reader after starting experiment. Earpiece data is missing some data from get ready.",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713361107,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 3409
+        }
+    },
+    "2024-04-17-p3-e-8.bin": {
+        "pid": 3,
+        "description": "using I2",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-17-p3-e-8.bin",
+        "datetime": "2024-04-17, 15:59:07",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713362158,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2639
+        }
+    },
+    "2024-04-17-p3-e-9.bin": {
+        "pid": 3,
+        "description": "using I2",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-17-p3-e-9.bin",
+        "datetime": "2024-04-17, 16:05:38",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713362546,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 3179
+        }
+    },
+    "2024-04-17-p3-e-10.bin": {
+        "pid": 3,
+        "description": "using I2",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-17-p3-e-10.bin",
+        "datetime": "2024-04-17, 16:12:48",
+        "notes": "lights turned off half way through",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713362973,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2719
+        }
+    },
+    "2024-04-17-p3-e-11.bin": {
+        "pid": 3,
+        "description": "using I2",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-17-p3-e-11.bin",
+        "datetime": "2024-04-17, 16:19:43",
+        "notes": "lights turned on half way through",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713363391,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 3959
+        }
+    },
+    "2024-04-18-p1-s-1.bin": {
+        "pid": 1,
+        "description": "sleep state analysis",
+        "protocol": [
+            [
+                "Awake",
+                739
+            ],
+            [
+                "Core",
+                60
+            ],
+            [
+                "Awake",
+                180
+            ],
+            [
+                "Core",
+                990
+            ],
+            [
+                "Deep",
+                180
+            ],
+            [
+                "Core",
+                450
+            ],
+            [
+                "Deep",
+                1860
+            ],
+            [
+                "Core",
+                60
+            ],
+            [
+                "REM",
+                120
+            ],
+            [
+                "Awake",
+                60
+            ],
+            [
+                "Core",
+                270
+            ],
+            [
+                "REM",
+                210
+            ],
+            [
+                "Core",
+                300
+            ],
+            [
+                "REM",
+                210
+            ],
+            [
+                "Core",
+                4320
+            ],
+            [
+                "Awake",
+                60
+            ],
+            [
+                "Core",
+                4260
+            ],
+            [
+                "REM",
+                390
+            ],
+            [
+                "Awake",
+                90
+            ],
+            [
+                "Core",
+                60
+            ],
+            [
+                "Awake",
+                30
+            ],
+            [
+                "Core",
+                750
+            ],
+            [
+                "REM",
+                750
+            ],
+            [
+                "Awake",
+                30
+            ],
+            [
+                "Core",
+                3750
+            ],
+            [
+                "REM",
+                60
+            ],
+            [
+                "Core",
+                270
+            ],
+            [
+                "REM",
+                90
+            ],
+            [
+                "Core",
+                60
+            ],
+            [
+                "REM",
+                101
+            ]
+        ],
+        "filename": "2024-04-18-p1-s-1.bin",
+        "datetime": "2024-04-17, 22:23:12",
+        "notes": "protocol taken from apple health export",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713385392,
+            "rtc_interval": 78,
+            "startup_delay": 0,
+            "memory_pointer": 1739
+        }
+    },
+    "2024-04-18-p3-e-1.bin": {
+        "pid": 3,
+        "description": "using I2",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-18-p3-e-1.bin",
+        "datetime": "2024-04-18, 15:51:04",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713448045,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2969
+        }
+    },
+    "2024-04-18-p3-e-2.bin": {
+        "pid": 3,
+        "description": "using I2",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-18-p3-e-2.bin",
+        "datetime": "2024-04-18, 15:57:28",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713448460,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 3149
+        }
+    },
+    "2024-04-18-p3-e-3.bin": {
+        "pid": 3,
+        "description": "using I2",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-18-p3-e-3.bin",
+        "datetime": "2024-04-18, 16:06:33",
+        "notes": "light went off during last mouth open",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713448995,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 4109
+        }
+    },
+    "2024-04-18-p3-e-4.bin": {
+        "pid": 3,
+        "description": "using I2",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-18-p3-e-4.bin",
+        "datetime": "2024-04-18, 16:19:15",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713449763,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 4459
+        }
+    },
+    "2024-04-18-p3-e-5.bin": {
+        "pid": 3,
+        "description": "using I2",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-18-p3-e-5.bin",
+        "datetime": "2024-04-18, 16:31:28",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713450496,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 3779
+        }
+    },
+    "2024-04-19-p1-s-1.bin": {
+        "pid": 1,
+        "description": "sleep state analysis",
+        "protocol": [
+            [
+                "Awake",
+                621
+            ],
+            [
+                "Core",
+                720
+            ],
+            [
+                "Awake",
+                330
+            ],
+            [
+                "Core",
+                1020
+            ],
+            [
+                "Deep",
+                1950
+            ],
+            [
+                "Core",
+                3150
+            ],
+            [
+                "REM",
+                2640
+            ],
+            [
+                "Core",
+                120
+            ],
+            [
+                "Awake",
+                30
+            ],
+            [
+                "Core",
+                1740
+            ],
+            [
+                "Deep",
+                960
+            ],
+            [
+                "Core",
+                1260
+            ],
+            [
+                "REM",
+                1350
+            ],
+            [
+                "Core",
+                3900
+            ],
+            [
+                "REM",
+                1350
+            ],
+            [
+                "Core",
+                3000
+            ],
+            [
+                "Awake",
+                90
+            ],
+            [
+                "Core",
+                180
+            ],
+            [
+                "Awake",
+                1629
+            ]
+        ],
+        "filename": "2024-04-19-p1-s-1.bin",
+        "datetime": "2024-04-18, 23:35:02",
+        "notes": "protocol taken from apple health export",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713476102,
+            "rtc_interval": 78,
+            "startup_delay": 0,
+            "memory_pointer": 2179
+        }
+    },
+    "2024-04-24-p1-s-1.bin": {
+        "pid": 1,
+        "description": "sleep state analysis",
+        "protocol": [
+            [
+                "Awake",
+                813
+            ],
+            [
+                "Core",
+                150
+            ],
+            [
+                "Awake",
+                90
+            ],
+            [
+                "Core",
+                720
+            ],
+            [
+                "Deep",
+                720
+            ],
+            [
+                "Core",
+                1860
+            ],
+            [
+                "Deep",
+                120
+            ],
+            [
+                "Core",
+                420
+            ],
+            [
+                "Deep",
+                1590
+            ],
+            [
+                "Core",
+                990
+            ],
+            [
+                "REM",
+                480
+            ],
+            [
+                "Awake",
+                60
+            ],
+            [
+                "Core",
+                1590
+            ],
+            [
+                "Deep",
+                1110
+            ],
+            [
+                "Core",
+                450
+            ],
+            [
+                "REM",
+                1050
+            ],
+            [
+                "Core",
+                3420
+            ],
+            [
+                "REM",
+                810
+            ],
+            [
+                "Core",
+                3240
+            ],
+            [
+                "REM",
+                1110
+            ],
+            [
+                "Core",
+                90
+            ],
+            [
+                "REM",
+                390
+            ],
+            [
+                "Core",
+                927
+            ]
+        ],
+        "filename": "2024-04-24-p1-s-1.bin",
+        "datetime": "2024-04-23, 23:54:57",
+        "notes": "protocol taken from apple health export",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713909297,
+            "rtc_interval": 78,
+            "startup_delay": 0,
+            "memory_pointer": 1859
+        }
+    },
+    "2024-04-24-p2-e-1.bin": {
+        "pid": 2,
+        "description": "using I3",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-24-p2-e-1.bin",
+        "datetime": "2024-04-24, 17:37:56",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713972828,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2909
+        }
+    },
+    "2024-04-24-p2-e-2.bin": {
+        "pid": 2,
+        "description": "using I3",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-24-p2-e-2.bin",
+        "datetime": "2024-04-24, 17:47:23",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713973421,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2379
+        }
+    },
+    "2024-04-24-p2-e-3.bin": {
+        "pid": 2,
+        "description": "using I3",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-24-p2-e-3.bin",
+        "datetime": "2024-04-24, 17:57:05",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713973931,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2099
+        }
+    },
+    "2024-04-24-p2-e-5.bin": {
+        "pid": 2,
+        "description": "using I3",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-24-p2-e-5.bin",
+        "datetime": "2024-04-24, 18:06:10",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713974579,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 3499
+        }
+    },
+    "2024-04-24-p2-e-6.bin": {
+        "pid": 2,
+        "description": "first grinding",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ]
+        ],
+        "filename": "2024-04-24-p2-e-6.bin",
+        "datetime": "2024-04-24, 18:55:23",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713977497,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2489
+        }
+    },
+    "2024-04-24-p2-e-7.bin": {
+        "pid": 2,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ]
+        ],
+        "filename": "2024-04-24-p2-e-7.bin",
+        "datetime": "2024-04-24, 19:29:18",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713979572,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2359
+        }
+    },
+    "2024-04-24-p2-e-8.bin": {
+        "pid": 2,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ]
+        ],
+        "filename": "2024-04-24-p2-e-8.bin",
+        "datetime": "2024-04-24, 19:38:20",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713980103,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2109
+        }
+    },
+    "2024-04-24-p2-e-9.bin": {
+        "pid": 2,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ]
+        ],
+        "filename": "2024-04-24-p2-e-9.bin",
+        "datetime": "2024-04-24, 19:42:40",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713980368,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2279
+        }
+    },
+    "2024-04-24-p2-e-10.bin": {
+        "pid": 2,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ]
+        ],
+        "filename": "2024-04-24-p2-e-10.bin",
+        "datetime": "2024-04-24, 19:47:49",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713980650,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2329
+        }
+    },
+    "2024-04-24-p3-e-1.bin": {
+        "pid": 3,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ]
+        ],
+        "filename": "2024-04-24-p3-e-1.bin",
+        "datetime": "2024-04-24, 19:08:45",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713978364,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 3169
+        }
+    },
+    "2024-04-24-p3-e-2.bin": {
+        "pid": 3,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ]
+        ],
+        "filename": "2024-04-24-p3-e-2.bin",
+        "datetime": "2024-04-24, 19:19:26",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713979005,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 3349
+        }
+    },
+    "2024-04-24-p3-e-3.bin": {
+        "pid": 3,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ]
+        ],
+        "filename": "2024-04-24-p3-e-3.bin",
+        "datetime": "2024-04-24, 19:26:53",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713979453,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2889
+        }
+    },
+    "2024-04-24-p3-e-4.bin": {
+        "pid": 3,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ]
+        ],
+        "filename": "2024-04-24-p3-e-4.bin",
+        "datetime": "2024-04-24, 19:33:31",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713979854,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 3229
+        }
+    },
+    "2024-04-24-p3-e-5.bin": {
+        "pid": 3,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ],
+            [
+                "Grinding",
+                15
+            ],
+            [
+                "Not grinding",
+                15
+            ]
+        ],
+        "filename": "2024-04-24-p3-e-5.bin",
+        "datetime": "2024-04-24, 19:43:48",
+        "notes": "none",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1713980441,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2749
+        }
+    },
+    "2024-04-25-p2-e-1.bin": {
+        "pid": 2,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Speaking",
+                30
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ]
+        ],
+        "filename": "2024-04-25-p2-e-1.bin",
+        "datetime": "2024-04-25, 16:16:21",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1714054427,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2159
+        }
+    },
+    "2024-04-25-p2-e-3.bin": {
+        "pid": 2,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ],
+            [
+                "Speaking",
+                30
+            ]
+        ],
+        "filename": "2024-04-25-p2-e-3.bin",
+        "datetime": "2024-04-25, 16:29:31",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1714055216,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2189
+        }
+    },
+    "2024-04-25-p2-e-4.bin": {
+        "pid": 2,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Speaking",
+                30
+            ],
+            [
+                "Get ready to drink",
+                15
+            ],
+            [
+                "Drink for 5 seconds",
+                5
+            ],
+            [
+                "Rest with mouth closed",
+                10
+            ],
+            [
+                "Wear with mouth open",
+                30
+            ],
+            [
+                "Wear with mouth closed",
+                30
+            ]
+        ],
+        "filename": "2024-04-25-p2-e-4.bin",
+        "datetime": "2024-04-25, 16:33:58",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1714055482,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 1869
+        }
+    },
+    "2024-04-25-p2-e-5.bin": {
+        "pid": 2,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-25-p2-e-5.bin",
+        "datetime": "2024-04-25, 18:40:24",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1714063038,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2209
+        }
+    },
+    "2024-04-25-p2-e-6.bin": {
+        "pid": 2,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-25-p2-e-6.bin",
+        "datetime": "2024-04-25, 18:45:01",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1714063314,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2079
+        }
+    },
+    "2024-04-25-p2-e-7.bin": {
+        "pid": 2,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-25-p2-e-7.bin",
+        "datetime": "2024-04-25, 18:50:08",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1714063624,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2609
+        }
+    },
+    "2024-04-25-p2-e-8.bin": {
+        "pid": 2,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-25-p2-e-8.bin",
+        "datetime": "2024-04-25, 18:55:43",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1714063958,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2399
+        }
+    },
+    "2024-04-25-p2-e-9.bin": {
+        "pid": 2,
+        "description": "",
+        "protocol": [
+            [
+                "Get ready",
+                30
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ],
+            [
+                "Mouth closed",
+                15
+            ],
+            [
+                "Mouth open",
+                15
+            ]
+        ],
+        "filename": "2024-04-25-p2-e-9.bin",
+        "datetime": "2024-04-25, 19:01:14",
+        "notes": "",
+        "densor_registers": {
+            "rc_enabled": true,
+            "sensor_states": {
+                "temp": true,
+                "pd": true,
+                "touch": false,
+                "baro": false,
+                "accel": true
+            },
+            "start_time": 1714064244,
+            "rtc_interval": 1,
+            "startup_delay": 0,
+            "memory_pointer": 2429
+        }
+    }
+}

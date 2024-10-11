@@ -1,0 +1,16 @@
+- 23-11-2022 CP: Add tuning capacitor to NFC-antenna
+- 23-11-2022 CP: WAKEUP/PIO0_0 of NHS3152 should not be connected to INT1
+					- INT 1 is a push-pull pin (to ground by default), this disables the button on the dev-board
+					- Draws excessive when in power-down mode (250 uA instead of 3.4 uA)
+- 23-11-2022 CP: Add method to wake NHS after a power-off state
+- 23-11-2022 CP: Add method to disable the I2C pull-ups, but leave VEXT on. (Pull-up are a majority of the current. New method would allow to wait for a interrupt)
+- 24-11-2022 CP: I2C uses a lot of power and needs a high clock frequency. Look into using SPI instead
+- 01-12-2022 CP: Optional: Add 1K precharge for VEXT.
+- 09-12-2022 CP: Better 0402 footprints
+- 16-12-2022 CP: Improve IMU footprint. Current one is hard to solder
+
+- 23-11-2022 CP: (dev-board) I2C level shifting FET's are connected to VVDBAT without a jumper. Add a jumper between
+- 24-11-2022 CP: (dev-board) SWD connector without sides (easier to disconnect)
+- 24-11-2022 CP: (dev-board) Switch to disconnect SWD (useful when doing low power measurements)
+- 24-11-2022 CP: (dev-board) Add more indication LED's
+- 24-11-2022 CP: (dev-board) SOT Footprint of the FET is not correct

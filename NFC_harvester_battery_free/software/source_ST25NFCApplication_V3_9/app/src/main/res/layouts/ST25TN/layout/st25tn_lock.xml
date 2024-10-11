@@ -1,0 +1,1521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".type2.st25tn.ST25TNLockActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/selectAllButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical|right"
+            android:textColor="@color/st_light_blue"
+            android:textSize="17dp"
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"
+            android:text="@string/select_all"/>
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:background="@color/white">
+
+        // HEADER
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:background="@drawable/cell_border_top_left_bottom"
+                android:textSize="17dp"
+                android:text="@string/register"
+                android:layout_weight="4"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:background="@drawable/cell_border_top_left_bottom"
+                android:textSize="17dp"
+                android:text="@string/bit"
+                android:layout_weight="2"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:background="@drawable/cell_border_top_bottom_left_right"
+                android:textSize="17dp"
+                android:text="@string/locked_memory"
+                android:layout_weight="8"
+                android:gravity="center"/>
+        </TableRow>
+    </TableLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:shrinkColumns="*"
+            android:stretchColumns="*"
+            android:background="@color/white">
+
+
+            // STATLOCK_0
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/statLock0Bit0Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b0"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_left_right"
+                    android:textSize="14dp"
+                    android:text="Lock b3 of STATLOCK_0"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/statLock0Bit1Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b1" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="8"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:paddingLeft="6dp"
+                        android:textSize="14dp"
+                        android:text="Lock b4 to b7 of STATLOCK_0"
+                        android:layout_weight="8"
+                        android:gravity="center_vertical|left"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:paddingLeft="6dp"
+                        android:textSize="14dp"
+                        android:text="Lock b0 to b1 of STATLOCK_1"
+                        android:layout_weight="8"
+                        android:gravity="center_vertical|left"/>
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/statLock0Bit2Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Lock b2 to b7 of STATLOCK_1"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text="STATLOCK_0"
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/statLock0Bit3Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b3" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x03 (CCFile)"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/statLock0ValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text="0x00"
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/statLock0Bit4Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b4" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x04"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/statLock0Bit5Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b5" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x05"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/statLock0Bit6Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:text="b6"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:textColor="@color/st_dark_blue"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x06"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/statLock0Bit7Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b7" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x07"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+
+            // STATLOCK_1
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/statLock1Bit0Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b0" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x08"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/statLock1Bit1Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b1" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x09"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/statLock1Bit2Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x0A"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text="STATLOCK_1"
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/statLock1Bit3Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b3" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x0B"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/statLock1ValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text="0x00"
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/statLock1Bit4Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b4" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x0C"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/statLock1Bit5Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b5" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x0D"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/statLock1Bit6Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b6" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x0E"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/statLock1Bit7Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b7" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x0F"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+
+            // DYNLOCK_0
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock0Bit0Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b0" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="15dp"
+                    android:text="Blocks 0x10 &amp; 0x11"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock0Bit1Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b1" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x12 &amp; 0x13"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock0Bit2Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x14 &amp; 0x15"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text="DYNLOCK_0"
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock0Bit3Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b3" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x16 &amp; 0x17"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/dynLock0ValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text="0x00"
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock0Bit4Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b4" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x18 &amp; 0x19"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock0Bit5Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b5" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x1A &amp; 0x1B"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock0Bit6Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b6" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x1C &amp; 0x1D"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock0Bit7Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b7" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x1E &amp; 0x1F"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+
+            // DYNLOCK_1
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock1Bit0Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b0" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x20 &amp; 0x21"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock1Bit1Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b1" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x22 &amp; 0x23"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text="DYNLOCK_1"
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock1Bit2Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x24 &amp; 0x25"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/dynLock1ValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text="0x00"
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock1Bit3Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b3" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x26 &amp; 0x27"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock1Bit4Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b4" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x28 &amp; 0x29"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock1Bit5Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b5" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x2A &amp; 0x2B"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+
+            // SYSLOCK
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/sysLockBit0Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b0" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x2C (Dyn&amp;Sys locks)"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/sysLockBit1Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b1" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x2D (Prod. Ident.)"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text="SYSLOCK"
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/sysLockBit2Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x2E (ANDEF conf)"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/sysLockValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text="0x00"
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/sysLockBit3Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b3" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x2F (Kill PWD)"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/sysLockBit4Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b4" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Block 0x30 (Kill Keyhole)"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+
+            // DYNLOCK_2
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock2Bit2Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x34 &amp; 0x35"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock2Bit3Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b3" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x36 &amp; 0x37"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text="DYNLOCK_2"
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock2Bit4Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b4" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x38 &amp; 0x39"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/dynLock2ValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text="0x00"
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock2Bit5Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b5" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x3A &amp; 0x3B"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock2Bit6Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b6" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x3C &amp; 0x3D"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cell_border_left_bottom"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_weight="4"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/dynLock2Bit7Checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/cell_border_top_left_bottom"
+                    android:textSize="14dp"
+                    android:textColor="@color/st_dark_blue"
+                    android:buttonTint="@drawable/custom_checkbox"
+                    android:text="b7" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/cell_border_top_bottom_left_right"
+                    android:textSize="14dp"
+                    android:text="Blocks 0x3E &amp; 0x3F"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical|left"/>
+            </TableRow>
+            
+        </TableLayout>
+
+    </ScrollView>
+
+
+
+ </LinearLayout>

@@ -1,0 +1,18 @@
+Designator,Description,Comment,Quantity
+
+"J1","CONN HEADER VERT 10POS 1.27MM","SHF-105-01-L-D-TH","1"
+"J2","THT Vertical Pin Header WR-PHD, Pitch 2.54 mm, Dual Row, 22 pins","61302221121","1"
+"J3","0.5 mm Pitch Easy-On(TM) Type FPC Connector, 2.0 mm Mated Height, Right Angle, ZIF, SMT, Top Contact, 16 Circuits, -20 to 85 degC, ELV and RoHS Compliant, Tape and Reel","52745-1697","1"
+"J4, J5, J6, J7","","MKDS 1/ 2-3,5 HT BK","4"
+"LED1, LED2, LED3, LED4","LED RED CLEAR 0805 SMD","150080SS75000","4"
+"P1","THT Vertical Pin Header WR-PHD, Pitch 2.54 mm, Single Row, 5 pins","61300511121","1"
+"P2, P4, P5, P6","THT Vertical Pin Header WR-PHD, Pitch 2.54 mm, Single Row, 2 pins","61300211121","4"
+"P3, P7, P8","THT Vertical Pin Header WR-PHD, Pitch 2.54 mm, Single Row, 3 pins","61300311121","3"
+"Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10","MOSFET N-CH 50V 220MA SOT-23","BSS138","10"
+"R1, R2, R4, R16","RES SMD 2K OHM 1% 1/8W 0805","2k","4"
+"R3, R5, R10, R11, R17","RES SMD 100 OHM 1% 1/8W 0805","100","5"
+"R6, R7, R8, R9, R12, R13, R14, R15, R18, R19","RES SMD 10K OHM 1% 1/8W 0805","10k","10"
+"SW1, SW2, SW3","SWITCH TACTILE SPST-NO 0.05A 12V","B3U-1000P","3"
+"SW4","Pushbutton Switch SPST-NO Keyswitch, Illuminated Through Hole","ASE4204","1"
+"TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14, TP15, TP16","Test Point, Black, Through Hole, RoHS, Bulk","5011","16"
+"U1","","RPI Pico","1"

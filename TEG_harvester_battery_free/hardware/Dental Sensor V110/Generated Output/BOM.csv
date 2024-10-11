@@ -1,0 +1,17 @@
+Designator,Description,Comment,Quantity
+
+"C1, C3","CAP CER 0.1UF 6.3V X5R 0402","0.10µF","2"
+"C2","CAP CER 2.2UF 6.3V X5R 0402","2.2µF","1"
+"C4","CAP CER 1UF 6.3V X7R 0402","1µF","1"
+"C5","CAP CER 10UF 6.3V X5R 0402","10µF","1"
+"C6","CAP CER 4.7UF 6.3V X5R 0402","4.7µF","1"
+"C7","CAP CER 22UF 10V X5R 0603","22µF","1"
+"C8","CAP CER 1000PF 6.3V X5R 0402","1000pF","1"
+"CN1","FFC / FPC Board Connector, 0.5 mm, 12 Contacts, Receptacle, Easy-On 52745, Surface Mount, Top","FPC Connector","1"
+"L1","Shielded Multilayer Inductor 10uH ±20% 300mA 780mO SMD 0603","MLZ1608N100LT000","1"
+"R1","RES SMD 1M OHM 1% 1/10W 0402","1M","1"
+"R2, R3","RES SMD 47K OHM 1% 1/10W 0402","47k","2"
+"TP1, TP2, TP3, TP4, TP6, TP7, TP8, TP9, TP10, TP11, TP12","","Testpoint","11"
+"U1","ARM-microcontrollers - MCU NTAG NHS3152 NFC","NHS3152UK","1"
+"U2","MEMS DIGITAL OUTPUT MOTION SENSO","AIS2DW12TR","1"
+"U3","Piezoelectric Energy Harvesting Power Supply, 10-pin SON (DD-10), -40 to 125 degC, Pb-Free","LTC3588EDD-1#PBF","1"

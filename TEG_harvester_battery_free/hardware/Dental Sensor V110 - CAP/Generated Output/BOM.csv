@@ -1,0 +1,10 @@
+Designator,Description,Comment,Quantity
+
+"C1, C3","CAP CER 0.1UF 6.3V X5R 0402","0.10µF","2"
+"C2","CAP CER 2.2UF 6.3V X5R 0402","2.2µF","1"
+"C4, C5","Supercapacitors / Ultracapacitors Reflow EDLC 3.3V, 11mF, 160 Ohm","CPH3225A","2"
+"CN1","FFC / FPC Board Connector, 0.5 mm, 12 Contacts, Receptacle, Easy-On 52745, Surface Mount, Top","FPC Connector","1"
+"R2, R3","RES SMD 47K OHM 1% 1/10W 0402","47K","2"
+"TP1, TP2, TP3, TP4, TP7, TP8, TP9, TP10","","Testpoint","8"
+"U1","ARM-microcontrollers - MCU NTAG NHS3152 NFC","NHS3152UK","1"
+"U2","MEMS DIGITAL OUTPUT MOTION SENSO","AIS2DW12TR","1"

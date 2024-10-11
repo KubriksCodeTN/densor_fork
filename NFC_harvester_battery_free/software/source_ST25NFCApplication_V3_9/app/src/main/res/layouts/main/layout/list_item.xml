@@ -1,0 +1,9 @@
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/blue_relative_selector"
+    android:singleLine="true"
+    android:gravity="center"
+    android:textSize="@dimen/text_normal_size"/>

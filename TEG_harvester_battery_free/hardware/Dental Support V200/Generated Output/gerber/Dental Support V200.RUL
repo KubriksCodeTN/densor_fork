@@ -1,0 +1,5 @@
+DRC Rules Export File for PCB: C:\Users\peppe\Documents\School\TU - Delft\ET4399 - Dental Sensor\densor\hardware\Dental Support V200\Dental Support V200.PcbDoc
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=7.87
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=5.91
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0

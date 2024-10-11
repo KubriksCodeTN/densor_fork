@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [Dental Sensor V200 - Panel.PcbDoc]
+   Generated File[Dental Sensor V200 - Panel.TXT]
+   Generated File[Dental Sensor V200 - Panel.LDP]
+   Generated File[Dental Sensor V200 - Panel.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 15:42:12 On 23-12-2022

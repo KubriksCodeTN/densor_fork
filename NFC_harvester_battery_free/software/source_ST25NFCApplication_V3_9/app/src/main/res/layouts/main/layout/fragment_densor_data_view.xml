@@ -1,0 +1,173 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ap="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/densor_time_sync"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:orientation="vertical">
+
+        <Button
+            android:id="@+id/densor_data_view_download"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/download"/>
+
+        <TextView
+            android:id="@+id/densor_data_view_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/no_data_loaded_yet"
+            />
+        
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="17sp"
+                            android:text="@string/temperature"/>
+
+                        <com.androidplot.xy.XYPlot
+                            android:id="@+id/densor_data_view_temp_plt"
+                            android:layout_width="match_parent"
+                            android:layout_height="350dp"
+                            ap:graphHeight="275dp"
+                            ap:graphHeightMode="absolute"
+                            ap:graphWidthMode="absolute"
+                            ap:graphWidth="275dp"
+                            ap:graphAnchor="center"
+                            ap:graphHorizontalPositioning="absolute_from_center"
+                            ap:graphHorizontalPosition="0dp"
+                            ap:graphVerticalPositioning="absolute_from_center"
+                            ap:graphVerticalPosition="0dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="17sp"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/photodiode"/>
+
+                        <com.androidplot.xy.XYPlot
+                            android:id="@+id/densor_data_view_pd_plt"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            ap:graphHeight="275dp"
+                            ap:graphHeightMode="absolute"
+                            ap:graphWidthMode="absolute"
+                            ap:graphWidth="275dp"
+                            ap:graphAnchor="center"
+                            ap:graphHorizontalPositioning="absolute_from_center"
+                            ap:graphHorizontalPosition="0dp"
+                            ap:graphVerticalPositioning="absolute_from_center"
+                            ap:graphVerticalPosition="0dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="17sp"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/future1"/>
+
+                        <com.androidplot.xy.XYPlot
+                            android:id="@+id/densor_data_view_future1_plt"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            ap:graphHeight="275dp"
+                            ap:graphHeightMode="absolute"
+                            ap:graphWidthMode="absolute"
+                            ap:graphWidth="275dp"
+                            ap:graphAnchor="center"
+                            ap:graphHorizontalPositioning="absolute_from_center"
+                            ap:graphHorizontalPosition="0dp"
+                            ap:graphVerticalPositioning="absolute_from_center"
+                            ap:graphVerticalPosition="0dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="17sp"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/future2"/>
+
+                        <com.androidplot.xy.XYPlot
+                            android:id="@+id/densor_data_view_future2_plt"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            ap:graphHeight="275dp"
+                            ap:graphHeightMode="absolute"
+                            ap:graphWidthMode="absolute"
+                            ap:graphWidth="275dp"
+                            ap:graphAnchor="center"
+                            ap:graphHorizontalPositioning="absolute_from_center"
+                            ap:graphHorizontalPosition="0dp"
+                            ap:graphVerticalPositioning="absolute_from_center"
+                            ap:graphVerticalPosition="0dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="17sp"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/accelerometer"/>
+
+                        <com.androidplot.xy.XYPlot
+                            android:id="@+id/densor_data_view_accel_plt"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            ap:graphHeight="275dp"
+                            ap:graphHeightMode="absolute"
+                            ap:graphWidthMode="absolute"
+                            ap:graphWidth="275dp"
+                            ap:graphAnchor="center"
+                            ap:graphHorizontalPositioning="absolute_from_center"
+                            ap:graphHorizontalPosition="0dp"
+                            ap:graphVerticalPositioning="absolute_from_center"
+                            ap:graphVerticalPosition="0dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="17sp"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/vdda"/>
+
+                        <com.androidplot.xy.XYPlot
+                            android:id="@+id/densor_data_view_vdda_plt"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            ap:graphHeight="275dp"
+                            ap:graphHeightMode="absolute"
+                            ap:graphWidthMode="absolute"
+                            ap:graphWidth="275dp"
+                            ap:graphAnchor="center"
+                            ap:graphHorizontalPositioning="absolute_from_center"
+                            ap:graphHorizontalPosition="0dp"
+                            ap:graphVerticalPositioning="absolute_from_center"
+                            ap:graphVerticalPosition="0dp"/>
+
+                </LinearLayout>
+
+        </ScrollView>
+
+
+</LinearLayout>

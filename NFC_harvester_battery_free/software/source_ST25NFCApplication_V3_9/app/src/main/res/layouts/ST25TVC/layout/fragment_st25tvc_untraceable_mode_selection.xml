@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/msgTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="16dp"
+        android:text="@string/st25tvc_untraceable_modes_available_on_this_tag" />
+
+    <RadioGroup
+        android:id="@+id/untraceableModeRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerTextView"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp" >
+
+        <RadioButton
+            android:id="@+id/silentModeRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:text="@string/silent_mode"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/st_dark_blue" />
+
+        <TextView
+            android:id="@+id/silentModeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/silent_mode_details" />
+
+        <RadioButton
+            android:id="@+id/responsiveModeRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:checked="true"
+            android:textSize="16dp"
+            android:text="@string/responsive_mode"
+            android:textStyle="bold"
+            android:textColor="@color/st_dark_blue" />
+
+        <TextView
+            android:id="@+id/responsiveModeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/responsive_mode_details" />
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:id="@+id/pwdButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pwdByte3To0Layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/st_light_blue"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:text="@string/cancel">
+        </Button>
+
+        <Button
+            android:id="@+id/continueButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/st_light_blue"
+            android:textSize="16dp"
+            android:text="@string/continue_message" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

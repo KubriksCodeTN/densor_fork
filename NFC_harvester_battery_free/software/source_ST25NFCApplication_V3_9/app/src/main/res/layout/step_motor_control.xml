@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/pwmStepMotorControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+    <TableLayout
+        android:id="@+id/pwmStepControlTableLayoutSliders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/headerTableSliderPWM1TextView"
+                android:layout_gravity="center"
+                android:text="@string/pwm_name1"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/headerTableSliderPWM2TextView"
+                android:layout_gravity="center"
+                android:text="@string/pwm_name2"
+                android:textStyle="bold"
+                android:typeface="serif" />
+        </TableRow>
+
+        <TableRow>
+
+            <RelativeLayout
+                android:id="@+id/pwm1_dutycycle_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/pwm1_step_motor_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/motor"
+                    android:textColor="@color/st_dark_blue" />
+                <ToggleButton
+                    android:id="@+id/pwm1_toggle_button_dutyCycle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pwm1_step_motor_title"
+                    android:layout_marginBottom="10px"
+                    android:textOff="@string/off"
+                    android:textOn="@string/on" />
+                <TextView
+                    android:id="@+id/pwm1_step_motor_speed_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pwm1_toggle_button_dutyCycle"
+                    android:layout_gravity="center"
+                    android:text="@string/speed"
+                    android:textColor="@color/st_dark_blue" />
+                <TextView
+                    android:id="@+id/pwm1_frequency_info_seekbar_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pwm1_step_motor_speed_title"
+                    android:layout_gravity="center"
+                    android:text="@string/pwm_slider_frequency_info_max"
+                    android:textColor="@color/st_dark_blue" />
+
+                <LinearLayout
+                    android:id="@+id/pwm1_frequency_frame_seekbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pwm1_frequency_info_seekbar_left"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <com.st.st25nfc.type5.st25dvpwm.VerticalSeekBar
+                        android:id="@+id/pwm1_step_motor_frequency_slider"
+                        android:layout_width="80dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/seekbar_style"
+                        android:thumb="@drawable/seekbar_custom_thumb">
+                    </com.st.st25nfc.type5.st25dvpwm.VerticalSeekBar>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/pwm1_frequency_info_seekbar_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pwm1_frequency_frame_seekbar"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/pwm_slider_frequency_info_min"
+                    android:textColor="@color/st_dark_blue" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pwm2_frequency_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pwm1_step_motor_direction_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/direction"
+                    android:textColor="@color/st_dark_blue" />
+                <ToggleButton
+                    android:id="@+id/pwm2_toggle_button_dutyCycle"
+                    android:layout_width="96dp"
+                    android:layout_marginTop="10px"
+                    android:layout_height="96dp"
+                    android:layout_below="@+id/pwm1_step_motor_direction_title"
+                    style="@style/toggleButton"
+                    android:background="@drawable/ic_step_motor_direction_toggle_bg"
+                 />
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+    </RelativeLayout>
+
+
+</FrameLayout>

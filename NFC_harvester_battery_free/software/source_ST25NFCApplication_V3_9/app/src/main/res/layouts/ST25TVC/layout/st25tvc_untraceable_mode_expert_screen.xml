@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".type5.st25tvc.ST25TVCUntraceableModeExpertScreenActivity">
+
+
+    <TextView
+        android:id="@+id/msg2TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/set_uuid_state" />
+
+    <RadioGroup
+        android:id="@+id/untraceableModeRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/uuidDisabledRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="@string/uuid_is_disabled"
+            android:textColor="@color/st_dark_blue" />
+
+        <RadioButton
+            android:id="@+id/uuidEnabledRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/uuid_is_enabled"
+            android:textColor="@color/st_dark_blue" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/msgTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/set_the_privacy_by_default_bits" />
+
+    <RadioGroup
+        android:id="@+id/privacyByDefaultRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/disabledEveryTimesRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/privacy_by_default_disabled"
+            android:textColor="@color/st_dark_blue" />
+
+        <RadioButton
+            android:id="@+id/enabledEveryTimesRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="@string/privacy_by_default_enabled"
+            android:textColor="@color/st_dark_blue" />
+
+        <RadioButton
+            android:id="@+id/enabledWhenTDOpenedRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="@string/privacy_by_default_enabled_when_td_open"
+            android:textColor="@color/st_dark_blue" />
+
+        <RadioButton
+            android:id="@+id/enabledWhenTDClosedRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="@string/privacy_by_default_enabled_when_td_short"
+            android:textColor="@color/st_dark_blue" />
+    </RadioGroup>
+
+
+   <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/lockCheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/lock_privacy_configuration" />
+
+    <Button
+        android:id="@+id/updateTagButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/light_blue_round_area"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:text="@string/update_tag_configuration"/>
+
+    <Button
+        android:id="@+id/sendToggleUntraceableCmdButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/light_blue_round_area"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:text="@string/send_toggle_untraceable_command"/>
+
+    <TextView
+        android:id="@+id/msg3TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/not_needed_if_privacy_by_default_enabled" />
+
+</LinearLayout>

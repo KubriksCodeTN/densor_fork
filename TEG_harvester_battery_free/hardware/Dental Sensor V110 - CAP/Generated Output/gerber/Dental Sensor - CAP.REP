@@ -1,0 +1,181 @@
+*************************************************************
+FileName = Dental Sensor - CAP.GBR
+AutoAperture = True
+*************************************************************
+Generating : Flex Stack Top Coverlay
+      File : Dental Sensor - CAP.GTS
+
+    Adding Layer      : Flex Stack Top Coverlay
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D16
+    D17
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+*************************************************************
+
+*************************************************************
+Generating : Top Layer
+      File : Dental Sensor - CAP.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D12
+    D13
+    D15
+    D16
+    D17
+    D18
+    D22
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : Dental Sensor - CAP.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D22
+    D27
+    D32
+*************************************************************
+
+*************************************************************
+Generating : Flex Stack Top Overlay
+      File : Dental Sensor - CAP.GTO
+
+    Adding Layer      : Flex Stack Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : Dental Sensor - CAP.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+*************************************************************
+
+*************************************************************
+Generating : Flex Stack Top Coverlay (Flex Stack)
+      File : Dental Sensor - CAP.GCT1
+
+    Adding Layer      : Flex Stack Top Coverlay (Flex Stack)
+
+
+Used DCodes :
+    D16
+    D17
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D34
+*************************************************************
+
+*************************************************************
+Generating : Flex Stack Bottom Coverlay (Flex Stack)
+      File : Dental Sensor - CAP.GCB1
+
+    Adding Layer      : Flex Stack Bottom Coverlay (Flex Stack)
+
+
+Used DCodes :
+    D34
+*************************************************************
+
+*************************************************************
+Generating : Flex Stack Bottom Coverlay
+      File : Dental Sensor - CAP.GBS
+
+    Adding Layer      : Flex Stack Bottom Coverlay
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Board Shape
+      File : Dental Sensor - CAP.GM1
+
+    Adding Layer      : Board Shape
+
+
+Used DCodes :
+    D33
+*************************************************************
+
+*************************************************************
+Generating : Assembly Notes
+      File : Dental Sensor - CAP.GM2
+
+    Adding Layer      : Assembly Notes
+
+
+Used DCodes :
+    D27
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : Dental Sensor - CAP.GD1
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D35
+*************************************************************
+

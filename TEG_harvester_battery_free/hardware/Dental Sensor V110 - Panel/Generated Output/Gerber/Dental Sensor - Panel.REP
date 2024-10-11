@@ -1,0 +1,221 @@
+*************************************************************
+FileName = Dental Sensor - Panel.GBR
+AutoAperture = True
+*************************************************************
+Generating : Top Layer
+      File : Dental Sensor - Panel.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : Dental Sensor - Panel.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D12
+    D19
+    D34
+    D35
+*************************************************************
+
+*************************************************************
+Generating : Flex Stack Top Overlay
+      File : Dental Sensor - Panel.GTO
+
+    Adding Layer      : Flex Stack Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D36
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : Dental Sensor - Panel.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D17
+    D18
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D29
+    D31
+    D32
+    D33
+    D37
+*************************************************************
+
+*************************************************************
+Generating : Flex Stack Top Coverlay
+      File : Dental Sensor - Panel.GTS
+
+    Adding Layer      : Flex Stack Top Coverlay
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D19
+    D23
+    D24
+    D26
+    D33
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+*************************************************************
+
+*************************************************************
+Generating : Flex Stack Bottom Coverlay
+      File : Dental Sensor - Panel.GBS
+
+    Adding Layer      : Flex Stack Bottom Coverlay
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D59
+*************************************************************
+
+*************************************************************
+Generating : Board Shape
+      File : Dental Sensor - Panel.GM1
+
+    Adding Layer      : Board Shape
+
+
+Used DCodes :
+    D12
+    D60
+*************************************************************
+
+*************************************************************
+Generating : Assembly Notes
+      File : Dental Sensor - Panel.GM2
+
+    Adding Layer      : Assembly Notes
+
+
+Used DCodes :
+    D10
+    D61
+*************************************************************
+
+*************************************************************
+Generating : Flex Stack Top Coverlay (Flex Stack)
+      File : Dental Sensor - Panel.GCT1
+
+    Adding Layer      : Flex Stack Top Coverlay (Flex Stack)
+
+
+Used DCodes :
+    D59
+    D62
+*************************************************************
+
+*************************************************************
+Generating : Flex Stack Bottom Coverlay (Flex Stack)
+      File : Dental Sensor - Panel.GCB1
+
+    Adding Layer      : Flex Stack Bottom Coverlay (Flex Stack)
+
+
+Used DCodes :
+    D59
+    D62
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : Dental Sensor - Panel.GD1
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D61
+    D63
+    D64
+    D65
+*************************************************************
+

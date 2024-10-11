@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".type5.st25tvc.ST25TVCUniqueTapCodeActivity">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/uniqueTapCodeEnableCheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="18dp"
+        android:text="@string/unique_tap_code_enabled" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="@string/unique_tap_code_ascii_value" />
+
+        <TextView
+            android:id="@+id/counterAsciiValueTextView"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:text="000"
+            android:singleLine="true"
+            android:lines="1"
+            android:textColor="@color/st_dark_blue"/>
+    </LinearLayout>
+
+
+</LinearLayout>

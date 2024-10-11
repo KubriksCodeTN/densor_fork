@@ -1,0 +1,198 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.st.st25nfc.generic.BlockRawDataEditorDialog">
+
+    <RelativeLayout
+        android:id="@+id/messageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:gravity="center"
+            android:singleLine="false"
+            android:textSize="@dimen/text_normal_size"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/blockByte3To0Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/messageLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/byte0Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/byte0EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:digits="0123456789ABCDEF"
+                android:inputType="textCapCharacters"
+                android:text="00" />
+
+            <TextView
+                android:id="@+id/byte0CaptionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/text_normal_size"
+                android:textStyle="bold"
+                android:text="@string/block_byte_0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/byte1Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/byte1EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:digits="0123456789ABCDEF"
+                android:inputType="textCapCharacters"
+                android:text="00" />
+
+            <TextView
+                android:id="@+id/byte1CaptionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/text_normal_size"
+                android:textStyle="bold"
+                android:text="@string/block_byte_1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/byte2Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/byte2EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:digits="0123456789ABCDEF"
+                android:inputType="textCapCharacters"
+                android:text="00" />
+
+            <TextView
+                android:id="@+id/byte2CaptionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/text_normal_size"
+                android:textStyle="bold"
+                android:text="@string/block_byte_2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/byte3Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/byte3EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:digits="0123456789ABCDEF"
+                android:inputType="textCapCharacters"
+                android:text="00" />
+
+            <TextView
+                android:id="@+id/byte3CaptionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/text_normal_size"
+                android:textStyle="bold"
+                android:text="@string/block_byte_3" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/blockButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blockByte3To0Layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="@string/cancel">
+        </Button>
+
+        <Button
+            android:id="@+id/okButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="@string/write_bytes" >
+        </Button>
+    </LinearLayout>
+
+</RelativeLayout>

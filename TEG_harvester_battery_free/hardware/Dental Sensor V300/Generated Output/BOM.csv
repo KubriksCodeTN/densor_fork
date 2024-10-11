@@ -1,0 +1,11 @@
+Designator,Description,Comment,Quantity
+
+"BT1, BT2, BT3","Coin, 4.8mm 3V Lithium Battery Rechargeable (Secondary) 2mAh","MS414GE-FL26E","3"
+"C1, C3, C4","CAP CER 0.1UF 6.3V X5R 0402","0.10µF","3"
+"C2","CAP CER 300PF 50V NP0 0402","300pF","1"
+"C5, C6","CAP CER 47UF 6.3V X5R 0603","47µF","2"
+"CN1","FFC / FPC Board Connector, 0.5 mm, 14 Contacts, Receptacle, Easy-On 52745, Surface Mount, Top","FPC Connector","1"
+"R1","RES SMD 47K OHM 1% 1/10W 0402","47k","1"
+"U1","ARM-microcontrollers - MCU NTAG NHS3152 NFC","NHS3152UK","1"
+"U2","FRAM (Ferroelectric RAM) Memory IC 4Mbit SPI 20 MHz 8-GQFN (3.23x3.28)","CY15B104QI-20LPXC","1"
+"U3","ACCEL 2-16G I2C/SPI 12LGA","LIS2DW12TR","1"

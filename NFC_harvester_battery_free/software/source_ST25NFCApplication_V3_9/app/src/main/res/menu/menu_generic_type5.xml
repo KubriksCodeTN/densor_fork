@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/type5_menus">
+        <menu>
+            <item
+                android:id="@+id/send_custom_cmd"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/send_custom_cmd"/>
+        </menu>
+    </item>
+
+</menu>

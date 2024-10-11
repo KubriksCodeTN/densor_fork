@@ -1,0 +1,196 @@
+# Densor NFC Harvester Battery-free
+
+<img src="images/densor_assembled.jpg" width="500">
+
+This is the official public repository for Densor: An intraoral sensing platform.
+
+## About the project
+
+This repository contains the design of Densor: an intraoral, actively powered, battery-free platform featuring multi-modal sensors and an extended lifespan. The repository consists of all components that make Densor:
+- [Hardware](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware)
+- [Densor Firmware](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/software/DentalSensor_StorageProject)
+- [Android app](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/software/source_ST25NFCApplication_V3_9)
+- [Experiment setup and data collected](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data/experiments)
+
+## Rationale
+
+Intraoral sensors are becoming increasingly important in the field of healthcare and technology. While head-worn wearables have made significant advancements in monitoring various health metrics, placing sensors directly in the mouth remains a significant challenge. Currently, we rely heavily on external tools to gather dental and oral health data, which leaves critical information missing. For those looking to deploy in-mouth sensors, the process is daunting, requiring them to start from scratch. Additionally, there is no straightforward way to keep these sensors small, safe, and capable of long-lasting communication, making it difficult to integrate them into practical applications.
+
+## Challenges
+
+Intraoral sensing is unique because it operates within one of the most dynamic and challenging environments in the human body—the mouth. Unlike other forms of wearable technology, intraoral sensors must contend with constant exposure to saliva, varying temperatures, and the mechanical forces of chewing and speaking. These sensors need to be not only highly sensitive and accurate but also biocompatible and safe for long-term use. Additionally, they offer the potential to gather real-time data on oral health, dietary habits, and even health conditions, providing insights that are difficult to obtain through external sensors. This makes intraoral sensing a powerful tool with unique capabilities that go beyond existing methods.
+
+## Densor Architecture
+
+<img src="images/densor_arch.png" width="1000">
+
+### Communication and Data Storage
+
+Densor uses the NFC interface ([ST25DV64K](https://www.st.com/en/nfc/st25dv64k.html)) for communication with a smartphone, and the on board non-voltatile memory to store measurements. This way, the collected data is always available to be read out by the smartphone.
+
+### Energy Harvesting
+
+Energy is harvested from the NFC tag itself, and stored for later use. This allows for Densor's continous operation and reader-independant data collection.
+
+### Energy Storage
+
+The harvested energy is stored on capacitors in place of batteries. This makes Densor a battery free device and much more safer and acceptable than potential toxic batteries.
+
+### Power control
+
+Despite using low-power sensors, energy would be drained from the storage capacitor(s) rapidly if Densor is kept continuously powered. As the harvested energy stored on the capacitors is limited, it is imperative that we save and expend this power carefully. To overcome this, we use a low power RTC [AB1805](https://abracon.com/Precisiontiming/AB18X5-RTC.pdf) with power switch for power management. This means that the MCU and sensors are completely powered off in the inter-sample period, with only the RTC powered to determine wake up time. This method achieves better power saving than deep-sleep or any of the low power run modes of the MCU.
+
+### Sensors
+
+As of now, Densor includes three sensing modalities - temperature, accelaration and light intensity. Measuring oral temperature, jaw position, and whether the mouth is open using intraoral sensors is useful for gaining insight into oral and overall health. Oral temperature sensors provide accurate readings to detect early signs of fever and inflammation. Jaw position sensors can monitor alignment and movement, making them valuable for detecting sleep patterns. Light sensors that detect whether the mouth is open can help track breathing patterns and oral habits, which are essential for identifying issues like mouth breathing or sleep-related disorders.
+
+## Results and Performance
+
+<img src="images/results_sensor_data.png" width="1000">
+
+The above image shows examples of data from Densor, and demonstrates its capabilities. The temperature can be seen rising to body temperature when Densor is inserted in the mouth. The light level falls when the mouth is closed, and rises when the mouth is open. It also varies when the user is speaking. When drinking cold water, the temperature initally falls and then rises back to body temperature. Densor can also determine the orientation of the jaw when the head is tilted. This is particularly useful for measuring head position during sleep as seen below.
+
+<img src="images/results_sleep_data.png" width="1000">
+
+The above image shows actual data collected from a user during a full night's sleep with 1 sample every 2 minutes. We can see the orientation of the head change between left, right and center as the user changes their sleep position.
+
+## Getting started
+
+The long term goal of the Densor project is to lower the ceiling of development of intraoral sensors. Thus, we wish that everyone can build, use and even expand Densor to improve capabilities and data collection. Here we explain the steps to create Densor from scratch.
+
+### Building the Densor Hardware
+
+<img src="images/densor_pcb_labelled.png" width="500">
+
+The Densor PCB is built using off-the-shelf components and assembled onto a flexible PCB. We used the flex PCB services from [PCBway](https://www.pcbway.com/fpc-rigid-flex-pcb/flex-pcb.html). The picture above shows the main components of Densor, and a more comprehensive list along with links to buy them can be found under [Hardware](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware).
+
+- **A** PCB antenna
+- **B** [ST25DV64K](https://www.st.com/en/nfc/st25dv64k.html) NFC tag
+- **C** Seiko [CPH3225A](https://www.sii.co.jp/en/me/datasheets/chip-capacitor/cph3225a/) chip capacitor bank
+- **D** Abracon [AB1805](https://abracon.com/Precisiontiming/AB18X5-RTC.pdf) RTC
+- **E** [LIS2DW12](https://www.st.com/en/mems-and-sensors/lis2dw12.html) accelerometer
+- **F** [STM32L021F4](https://www.st.com/en/microcontrollers-microprocessors/stm32l021f4.html) MCU
+- **G** [VEMD1060X01](https://www.vishay.com/docs/84295/vemd1060x01.pdf) photodiode
+- **H** SWD programming port (which is cut off before embedding in a dental aligner).
+
+The **hardware** folder contains the [gerber files](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware/gerbers_schematic) which can be used to order the PCBs directly. To order directly, use the `.gbr` Gerber output files and `.drl` drill file for manufacturing.
+
+The hardware folder also contains the [schematic](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware/gerbers_schematic) and [KiCad](https://www.kicad.org/blog/2021/12/KiCad-6.0.0-Release/) project which can be used for further expansion or modifications of Densor. A screenshot of the Densor PCB design in KiCad can be seen below. To open the project using Kicad, launch Kicad and navigate to 'File' -> 'Open project' -> And choose the [densor_nfc_v2.kicad_pro](https://github.com/TUDSSL/densor/blob/master/NFC_harvester_battery_free/hardware/Densor_kicad_project/densor_nfc_v2.kicad_pro) project file. The project includes the KiCad project files `.kicad_pcb`, `.pro` and `.sch`.
+
+<img src="images/kicad_screenshot.png" width="500">
+
+With the PCB and components, we used the lead-free [SAC305](https://nl.mouser.com/datasheet/2/73/SMD291SNL250T3-595229.pdf) solder paste to assemble the Densor as per the schematic.
+
+### Uploading the software
+
+Once the hardware is assembled, the STM32L021 MCU on board the densor needs to have the firmware uploaded. The [software folder](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/software/DentalSensor_StorageProject) contains the [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html) based project required for this. The program is uploaded using a [J-Link Debug probe](https://www.segger.com/products/debug-probes/j-link/) and 10-pin header.
+
+**Note:** The current version of the PCB also has an [5034800800 FPC connector](https://www.molex.com/en-us/products/part-detail/5034800800) with all SWD signals which can also be used for programming.
+
+### Memory layout and Pinout
+
+<img src="images/densor_bf_memmap.png" width="500">
+
+### Using the app
+
+With the software uploaded, the Densor is ready to use in principle. This can be verified with an android phone running the [smartphone application](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/software/source_ST25NFCApplication_V3_9) in the software folder. The app is built using Android Studio and can interact with the assembled Densor PCB via NFC. Detailed instructions on how to build the app can be found [here](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/software/source_ST25NFCApplication_V3_9). A screenshot of the app can be seen below.
+
+<img src="images/densor_app_screenshot.png" width="150">
+
+### Attaching Densor to aligners using epoxy
+
+Finally, the Densor PCB has to be attached to the retiners or aligners. Clear plastic vaccum formed [retainers](https://en.wikipedia.org/wiki/Retainer_(orthodontics)) are widely used in orthodontic treatment. They can easily be fabricated with the help of a dental technician.
+
+In our implementation - first, a [dental impression](https://en.wikipedia.org/wiki/Dental_impression) of each test subject was taken using [condensation silicone](https://products.coltene.com/EN/US/products/prosthetics/c-silicones/speedex/speedex-putty) placed on a dental impression tray. The hardened impression was later used to create a [plaster model](https://bredent-group.com/wp-content/uploads/2020/06/gipse-von-hoechster-Qualitaet_000727GB-20150601.pdf) of the subject's lower jaw teeth. Next, the plaster was placed inside an [Erkoform-3d+ dental](https://www.erkodent.de/en/product/?id=521210) thermoforming unit. Then, a dental [thermoforming plate](https://www.erkodent.de/wp-content/documents/products/thermoprosp_EN.pdf) was heated to 160 degrees Celcius by Erkoform-3d+, placed over the dental plaster and vacuum sealed. After vacuum sealing, all redundant and sharp edges of the fabricated aligner were removed by the cut-off wheel. The remaining imperfections were removed with the same cut-off wheel, and finally disinfected.
+
+
+We used a [food safe epoxy](https://polyestershoppen.com/epoxy/voedselveilige-epoxy-419.html) to attach the assembled Densor PCB to the retainers. The epoxy has to be carefully mixed in a 10:6 ratio of resin and hardner, and applied over the PCB with a brush. The epoxy takes a full 5 days to cure completely and must not be used before that even though it appears to have hardened.
+
+Once fully cured, Voila! Densor is ready to use!
+
+## How to operate Densor
+
+To use Densor, begin with the smartphone app, and fully assembled Densor.
+
+### Starting and Stopping Densor
+
+1. When you hold Densor close to the smartphone such that both NFC antennas align, the app will launch automatically and Densor will begin charging.
+
+2. The capacitor's charged voltage will be displayed in the app. While Densor theoretically supports 3.3V, in practice, it reaches about 2.6V.
+
+3. To configure the sensor, go to the settings tab. Here, you can enable specific sensors, select the sampling rate, and set an optional delayed start. Click the `Update` button to apply these settings to the sensor.
+
+4. The Densor will only begin measuring once the time is synced. In the `Time Sync` tab, click the `Sync` button to start the sensor from the current time. The `Wipe` button deletes all previously collected data, while `Delete` resets the cursor without overwriting previous data with zeros.
+
+5. To stop the sensor, switch to `Charge` mode. This will revert the sensor to showing feedback on the charging voltage reached. **Note:** This will also reset the timestamp. Please save measurements before putting Densor to charge mode.
+
+### Reading the data
+
+1. To save the data, go to the `Memory` tab and click `Dump memory to file`. In the 'Destination folder' field, enter your desired file name, then click `OK`. The data will be saved as a `.bin` file on your phone. The file is located in the 'Downloads' folder of the internal memory.
+
+2. To analyse this data, use the scripts in the [data folder](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data) of this repository.
+
+3. If the [experiment master](https://github.com/TUDSSL/densor/blob/master/NFC_harvester_battery_free/data/experiments/experiment_master_ui.py) script was used to generate the data as per a protocol, then place the generated `.bin` file in the [data dumps folder](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data/experiments/data_dumps), and view the results with the [plot_labelled.py](https://github.com/TUDSSL/densor/blob/master/NFC_harvester_battery_free/data/experiments/plot_labeled.py) script. Make sure to use the [environment](https://github.com/TUDSSL/densor/blob/master/NFC_harvester_battery_free/data/environment.yml) provided.
+
+## Collecting new data
+
+Data collected using data can be labelled and stored using the scripts in the [data folder](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data/experiments).
+
+1. **Using a protocol:** You can use an [existing protocol](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data/experiments/experiment_protocols) or create a new `.json` file to decide the tasks that will be performed while using Densor for the labels.
+2. **Executing an experiemnt:** Run the [experiment_master_ui.py](https://github.com/TUDSSL/densor/blob/master/NFC_harvester_battery_free/data/experiments/experiment_master_ui.py) file to launch the instructing script. Perform the actions as instructed by the script for the prescribed duration.
+
+<img src="images/ui_screenshot.png" width="500">
+
+3. **Save the data:** Save the data using the smartphone app with the name prompted by the script to a `.bin` file and place it in the [data_dumps](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data/experiments/data_dumps) folder.
+4. **Label and view the data:** Run the `data_labeller.py` script to label the data for further ML tasks, or `plot_labelled.py` file to view the data.
+
+## Frequently Asked Questions
+
+**1. How long does it take to charge Densor?**
+
+It takes approximately a minute to charge Densor using a smartphone. The exact charging time depends on how well the antennas of Densor and the smartphone align. The exact charging voltage of the capacitors can be read on the app for feedback.
+
+**2. How long does Densor run when fully charged?**
+
+Densor's lifetime depends on the sampling rate and number of capacitors used. For example, when using 2 capacitors and sampling once every 2 minutes - Densor lasts for about 7 hours. To increase the lifetime, more capacitors can be added. This will however change the charging behavior as well.
+
+**3. Is Densor comfortable?**
+
+In our opinion, the experience of using Densor is no different than using retainers. Thus, if using retainers/aligners anyway, Densor should cause no additional discomfort than existing.
+
+**4. Will the mouth opening detection based on light intensity work when sleeping in the dark?**
+
+Unfortunately, the mouth opening detection only works when there is sufficient ambient light. We are investigating ways to increase sensitivity for dark environments.
+
+**5. Can I buy a Densor?**
+
+Densor can be built with the design files in _this repository_. We desire Densor to be a free open source platform that can be rebuilt and expanded by everyone. If you wish to use (or expand) for your own research, please do not hesitate to contact us. We are happy to assist reproduction efforts, and may be able to coordinate efforts.
+
+## How to Contribute to this Project
+
+We look forward to your contributions, improvements, additions and changes. Please follow the standard [GitHub flow](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/github-flow) for code contributions. In macro terms this means the following.
+
+1. [Fork the `master` branch](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo#keep-your-fork-synced)  of this repository; make sure that your fork will be [up to date](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo#keep-your-fork-synced) with the latest `master` branch.
+1. Create an issue [here](https://github.com/TUDSSL/densor/issues) with a new feature or a bug report.
+1. Perform changes on your local branch and [push them to your forked clone](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/merging-an-upstream-repository-into-your-fork).
+1. Create a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) referencing the issue it covers and wait for our response.
+
+### List of Known Issues
+
+List of all known issues is listed in the [Issues](https://github.com/TUDSSL/densor/issues) list of this project. If you found a bug or you would like to enhance Densor: [please contribute](#How-to-Contribute-to-this-Project)! We look forward to your additions.
+
+## How to cite this work
+
+Details on how to cite this work will be updated once Densor is published.
+
+## Acknowledgements
+
+We thank Tofik Babayev from TofDent, The Hague, The Netherlands, for help in fabricating all versions of the Densor. We also thank Giuseppe Deininger and Jakub Patałuch for contribution to the development of Densor at the initial states of the development. We also thank Lennart Klaver for first attempts in designing intraoral sensor hardware, Jasper de Winkel for system design consulting and Izabela Grudzińska for dentistry consulting and for the inspiration of this project.
+
+<a href="https://www.tudelft.nl"><img src="https://github.com/TUDSSL/DIPS/blob/master/images/tudelft_logo.png" width="250px"></a> <a href="https://www.radboudumc.nl/en/about-radboudumc"><img src="images/radboudumc-logo-en-us.svg" width="250px"></a>
+
+## Copyright
+
+Copyright (C) 2024 TU Delft Embedded Systems Group/Sustainable Systems Laboratory.
+
+MIT Licence or otherwise specified. See [license](https://github.com/TUDSSL/ENGAGE/blob/master/LICENSE) file for details.

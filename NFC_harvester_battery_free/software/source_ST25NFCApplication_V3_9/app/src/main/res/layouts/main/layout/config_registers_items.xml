@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/registerNameAndValueLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/registerNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="@string/filled_at_runtime"/>
+
+        <ImageView
+            android:id="@+id/registerRightImageView"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@+id/registerValueEditText"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:src="@drawable/read_write" />
+
+        <EditText
+            android:id="@+id/registerValueEditText"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="6dp"
+            android:text="0000"
+            android:gravity="center"
+            android:maxLength="8"
+            android:ems="4"
+            android:digits="0123456789ABCDEF"
+            android:inputType="textCapCharacters"
+            android:background="@color/st_very_light_blue"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/registerDescriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerNameAndValueLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentLeft="true"
+        android:text="@string/register_description" />
+
+</RelativeLayout>

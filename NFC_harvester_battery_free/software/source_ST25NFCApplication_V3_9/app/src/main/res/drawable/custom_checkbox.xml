@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:color="@color/st_dark_blue"
+        android:state_enabled="true"
+        android:state_checked="false"
+        android:state_activated="true"/>
+
+    <item android:color="@color/red"
+        android:state_enabled="true"
+        android:state_checked="true"
+        android:state_activated="true"/>
+
+    <item android:color="@color/st_light_grey"
+        android:state_enabled="false"
+        android:state_checked="false"
+        android:state_activated="true"/>
+
+    <item android:color="@color/st_light_grey"
+        android:state_enabled="false"
+        android:state_checked="true"
+        android:state_activated="true"/>
+
+    <!-- Trick using the "activated" state to get alternate colors -->
+    <item android:color="@color/red_grey"
+        android:state_enabled="false"
+        android:state_checked="false"
+        android:state_activated="false"/>
+
+    <item android:color="@color/red_grey"
+        android:state_enabled="false"
+        android:state_checked="true"
+        android:state_activated="false"/>
+
+</selector>

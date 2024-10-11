@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".type5.st25dv.ST25DVFtmDemoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/discovery_board_name"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/boardNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:textSize="15dp"
+            android:textColor="@color/st_light_blue"
+            android:text="@string/unknown" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/sendPictureToTagButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="3"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/light_blue_round_area"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:text="@string/send_picture_to_tag"/>
+
+        <Button
+            android:id="@+id/receivePictureFromTagButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="3"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/light_blue_round_area"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:text="@string/receive_picture_from_tag"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/firmwareUpdateDemoButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/light_blue_round_area"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:text="@string/firmware_update"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/sendDataToTagButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="3"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/light_blue_round_area"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:text="@string/send_data_to_tag"/>
+
+        <Button
+            android:id="@+id/receiveDataFromTagButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="3"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/light_blue_round_area"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:text="@string/receive_data_from_tag"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight = "1"
+            android:background="@color/st_light_grey"
+            android:progressTint="@color/st_dark_blue"
+            android:secondaryProgressTint="@color/st_light_blue"/>
+
+        <ImageView
+            android:id="@+id/stopImageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight = "0"
+            android:gravity="center"
+            android:src="@drawable/ic_baseline_stop_24" />
+
+    </LinearLayout>
+
+
+
+    <com.st.st25nfc.type5.st25dv.Chronometer
+        android:id="@+id/st25DvChronometer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="45sp"
+        android:text="@string/transfer_chronometer"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/very_light_grey_round_area"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginLeft="20dp"
+                android:textSize="16dp"
+                android:gravity="left"
+                android:text="@string/transmitted" />
+
+            <TextView
+                android:id="@+id/transmittedBytesTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:layout_marginRight="20dp"
+                android:textSize="16dp"
+                android:gravity="right"
+                android:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginLeft="20dp"
+                android:textSize="16dp"
+                android:gravity="left"
+                android:text="@string/received" />
+
+            <TextView
+                android:id="@+id/receivedBytesTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:layout_marginRight="20dp"
+                android:textSize="16dp"
+                android:gravity="right"
+                android:text="0" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/errorRecoveryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/error_recovery_enabled"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/st_light_blue"
+            android:textSize="16dp"
+            android:text="@string/update"/>
+    </LinearLayout>
+
+</LinearLayout>

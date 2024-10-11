@@ -1,0 +1,235 @@
+apply plugin: 'com.android.application'
+
+def sdkFound
+def foundST25SDKLibraryFeatures () {
+    def extension
+    new File("./app/libs/").eachFile() { file ->
+        def name = file.getName()
+        sdkFound = name
+        println file.getName().substring(0,7)
+        if (file.getName().substring(0,7) == "st25sdk") {
+            println name.substring(8,name.length()-10)
+            if ( (name.length() - 10 ) > 8) {
+                extension = name.substring(8, name.length() - 10)
+            } else {
+                extension = "public"
+            }
+        }
+    }
+    return extension
+}
+def foundST25SDKLibraryFileName () {
+    def name = ""
+    def numberOfLibFound = 0
+    new File("./app/libs/").eachFile() { file ->
+        name = file.getName()
+        if (name == "") {
+            println " *********** WARNING no st25sdk lib found *********** "
+        } else {
+            numberOfLibFound = numberOfLibFound +1
+        }
+        println name
+    }
+    if (numberOfLibFound > 1) {
+        println " *********** WARNING multiple st25sdk lib found *********** "
+    }
+    return name
+}
+sdkFound =  foundST25SDKLibraryFileName()
+def buildSdkFeature (String name) {
+    println " *********** st25sdk used : " + name
+    def values = name.split('-')
+    for (int idx =0;idx <values.size();idx++) {
+        println values[idx]
+    }
+    def extension = ""
+    if (values.size() >= 2) {
+        for (int idx =1;idx <values.size()-1;idx++) {
+            extension = extension + "-" + values[idx]
+        }
+    } else {
+        extension = extension + "-" + "public"
+    }
+    return extension
+}
+def features = buildSdkFeature(sdkFound)
+
+task ST25SDKNameTask {
+    println ("Getting ST25SDK name for apk name")
+    println(features)
+}
+
+
+android {
+    compileSdkVersion 33
+    def appName = "ST25NFCTap"
+    def appVersionName = "3.9.0"
+    defaultConfig {
+        applicationId "com.st.st25nfc"
+        minSdkVersion 23
+        targetSdkVersion 33
+        versionCode 25
+        versionName appVersionName
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        vectorDrawables.useSupportLibrary = true
+        setProperty("archivesBaseName", appName + features + "-v"  + versionName )
+        signingConfig signingConfigs.debug
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue "string", "app_name", "ST25"
+        }
+
+        debug {
+            applicationIdSuffix ".dbg"
+            resValue "string", "app_name", "ST25 dbg"
+        }
+
+        applicationVariants.all { variant ->
+            variant.outputs.all { output ->
+                def newApkName;
+                if (variant.buildType.name.equals("release")) {
+                    newApkName = "ST25NFCTap-signed${features}-V${versionName}.apk";
+
+                } else {
+                    newApkName = "ST25NFCTap${features}-V${versionName}-internal.apk";
+                }
+                outputFileName = newApkName;
+
+            }
+        }
+    }
+
+    if (JavaVersion.current().isJava8Compatible()) {
+        allprojects {
+            tasks.withType(Javadoc) {
+                options.addStringOption('Xdoclint:none', '-quiet')
+            }
+        }
+    }
+
+    // Warning: GraphViz should be in the PATH of your environment (http://www.graphviz.org)
+    task generate_javadoc_with_graph(dependsOn: build) {
+        setDescription('Generates Javadoc API documentation with UMLGraph diagrams')
+        setGroup(JavaBasePlugin.DOCUMENTATION_GROUP)
+        ext.androidJar = "${android.sdkDirectory}/platforms/${android.compileSdkVersion}/android.jar"
+        doLast {
+            def javaFilePath = file('src/main/java')
+            if (javaFilePath.exists()) {
+                ant.javadoc(classpath: "ext.androidJar",
+                        sourcepath: file('src/main/java'),
+                        Doctitle: "ST25 NFC Tap",
+                        Windowtitle: "ST25 NFC Tap ",
+                        bottom: "COPYRIGHT 2017 STMicroelectronics. All rights reserved.",
+                        header: "<b> ${appName}-${appVersionName}<b> ",
+                        packagenames: '*',
+                        destdir: "../docs/javadoc/",
+                        private: 'true',
+                        docletpath: file('UmlGraph.jar'),
+                        charset: 'UTF-8',
+                        encoding: 'UTF-8',
+                        docencoding: 'UTF-8') {
+                    doclet(name: 'org.umlgraph.doclet.UmlGraphDoc')
+                            {
+                                param(name: '-inferrel')
+                                param(name: '-inferdep')
+                                param(name: '-qualify')
+                                param(name: '-postfixpackage')
+                                param(name: '-hide', value: 'java.*')
+                                param(name: '-collpackages', value: 'java.util.*')
+                                param(name: '-nodefontsize', value: '9')
+                                param(name: '-nodefontpackagesize', value: '7')
+
+                            }
+                }
+            } else {
+                print("!!! Cannot find source path !!!");
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/java/UI']
+            res.srcDirs = ['src/main/res/',
+                           'src/main/res/layouts/ST25TN',
+                           'src/main/res/layouts/LRix',
+                           'src/main/res/layouts/ST25TV',
+                           'src/main/res/layouts/ST25TVC',
+                           'src/main/res/layouts/ST25DV',
+                           'src/main/res/layouts/ST25DVPwm',
+                           'src/main/res/layouts/STM24TA',
+                           'src/main/res/layouts/STM24LR',
+                           'src/main/res/layouts/main',
+                           'src/main/res/layouts/Ndef']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    lint {
+        abortOnError false
+    }
+    namespace 'com.st.st25nfc'
+    testNamespace 'com.st.st25nfc.androidWrapper'
+}
+
+gradle.taskGraph.whenReady { graph ->
+    if (graph.hasTask(generateDebugSources)) {
+        print "=== Debug Build ===\n"
+    } else {
+        print "=== Release Build ===\n"
+    }
+}
+
+repositories {
+}
+
+configurations {
+    umlgraphDoclet
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // IMPORTANT: The next 2 lines are needed to link the ST25SDK and the AndroidReaderInterface
+    implementation files('libs/st25sdk-1.10.0.jar')
+    implementation project(':st25.android.reader.interface')
+
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.palette:palette:1.0.0'
+
+    implementation 'org.apache.commons:commons-lang3:3.5'
+
+    // Needed for ST25SDK
+    implementation 'com.madgag.spongycastle:bcpkix-jdk15on:1.58.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    umlgraphDoclet 'org.umlgraph:umlgraph:5.6.6'
+
+    implementation "com.androidplot:androidplot-core:1.5.10"
+}
+
+tasks.whenTaskAdded { task ->
+    if (task.name.startsWith("bundle")) {
+        def renameTaskName = "rename${task.name.capitalize()}Aab"
+        def flavor = task.name.substring("bundle".length()).uncapitalize()
+        tasks.create(renameTaskName, Copy) {
+            def path = "${buildDir}/outputs/bundle/${flavor}/"
+            from(path)
+            include "app.aab"
+            destinationDir file("${buildDir}/outputs/renamedBundle/")
+            rename "app.aab", "${flavor}.aab"
+        }
+
+        task.finalizedBy(renameTaskName)
+    }
+}

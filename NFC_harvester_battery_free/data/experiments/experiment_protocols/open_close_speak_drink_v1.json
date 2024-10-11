@@ -1,0 +1,6 @@
+[
+    [["Wear with mouth closed",30]],
+    [["Wear with mouth open",30]],
+    [["Speaking",30]],
+    [["Get ready to drink",15],["Drink for 5 seconds",5],["Rest with mouth closed",10]]
+]

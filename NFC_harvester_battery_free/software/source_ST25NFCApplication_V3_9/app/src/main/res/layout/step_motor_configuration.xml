@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/stepMotorConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tag_header_txt_size"
+        android:baselineAligned="false"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/stepMotor_ConfigMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+        <ToggleButton
+            android:id="@+id/stepMotor_configuration_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10px"
+            android:textAllCaps="false"
+            android:textOff="@string/config_frequency_range"
+            android:textOn="@string/hide_frequency_configuration" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stepMotorConfigTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stepMotor_ConfigMode"
+        android:layout_marginTop="@dimen/tag_header_txt_size"
+        android:layout_marginBottom="@dimen/tag_header_txt_size"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <TableLayout
+            android:id="@+id/pwm1TableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/ValueEmptyTextView"
+                    android:paddingLeft="10dp"
+                    android:text="@string/pwm_name1"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/ValueTextView"
+                    android:background="@drawable/st_translucid_tableborder"
+                    android:padding="10px"
+                    android:text="@string/Value" />
+
+                <TextView
+                    android:id="@+id/RangeTextView"
+                    android:background="@drawable/st_translucid_tableborder"
+                    android:padding="10px"
+                    android:text="@string/Range" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/FreqMaxTextView"
+                    android:background="@drawable/st_translucid_tableborder"
+                    android:paddingLeft="10dp"
+                    android:text="@string/frequency_max" />
+
+                <EditText
+                    android:id="@+id/StepMotorFreqMaxValueEditText"
+                    android:background="@drawable/st_light_blue_tableborder"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:padding="10px"
+                    android:paddingLeft="10dp"
+                    android:text="@string/pwm_high_default_freq_value"
+                    android:textColor="@color/st_dark_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/RangeFreqMaxTextView"
+                    android:background="@drawable/st_translucid_tableborder"
+                    android:padding="10px"
+                    android:text="@string/pwm_range_frequency_info" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/FreqMinTextView"
+                    android:background="@drawable/st_translucid_tableborder"
+                    android:paddingLeft="10dp"
+                    android:text="@string/frequency_min" />
+
+                <EditText
+                    android:id="@+id/StepMotorFreqMinValueEditText"
+                    android:background="@drawable/st_light_blue_tableborder"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:padding="10px"
+                    android:paddingLeft="10dp"
+                    android:text="@string/pwm_high_default_freq_value"
+                    android:textColor="@color/st_dark_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/RangeFreqMinTextView"
+                    android:background="@drawable/st_translucid_tableborder"
+                    android:padding="10px"
+                    android:text="@string/pwm_range_frequency_info" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
