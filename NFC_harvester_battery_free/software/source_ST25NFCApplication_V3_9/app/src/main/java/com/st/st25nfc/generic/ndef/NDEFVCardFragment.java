@@ -60,7 +60,6 @@ import com.st.st25nfc.R;
 import com.st.st25nfc.generic.util.ContactHelper;
 import com.st.st25sdk.ndef.NDEFMsg;
 import com.st.st25sdk.ndef.VCardRecord;
-import com.theartofdev.edmodo.cropper.CropImage;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -96,11 +95,6 @@ public class NDEFVCardFragment extends NDEFRecordFragment {
     private int mAction;
 
     private final int PICK_CONTACT = 1;
-    private final int PICK_IMAGE = 2;
-    private final int PICTURE_CROP = CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE;
-
-    private final int mDefaultPhotoDisplayHSize = 256;
-    private final int mDefaultPhotoDisplayWSize = 256;
 
     private ActivityResultContracts.RequestMultiplePermissions mMultiplePermissionsContract;
     private ActivityResultLauncher<String[]> mMultiplePermissionLauncher;
@@ -290,7 +284,6 @@ public class NDEFVCardFragment extends NDEFRecordFragment {
             @Override
             public void onClick(View v) {
                 //captureFrame();
-                selectImageInPhoneMemory();
             }
         });
 
@@ -429,84 +422,11 @@ public class NDEFVCardFragment extends NDEFRecordFragment {
         askPermissions(mMultiplePermissionLauncher);
     }
 
-    private void performCrop(Uri pictureUri) {
-        try {
-            CropImage.activity(pictureUri)
-                    .setFixAspectRatio(true)
-                    .setAspectRatio(1, 1)
-                    .start(getContext(), this);
-
-        } catch (ActivityNotFoundException anfe) {
-            showToast(R.string.device_doesnt_support_crop_feature);
-        }
-    }
-
-    private void selectImageInPhoneMemory() {
-        String message = getString(R.string.select_picture);
-
-        // Pick up FW in phone's memory storage
-        Intent intent = new Intent()
-                .setType("image/*")
-                .setAction(Intent.ACTION_GET_CONTENT);
-
-        // Special intent for Samsung file manager
-        Intent sIntent = new Intent("com.sec.android.app.myfiles.PICK_DATA");
-        sIntent.addCategory(Intent.CATEGORY_DEFAULT);
-
-        Intent chooserIntent;
-        if (getContext().getPackageManager().resolveActivity(sIntent, 0) != null){
-            // it is device with samsung file manager
-            chooserIntent = Intent.createChooser(sIntent, message);
-            chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, new Intent[] { intent});
-        }
-        else {
-            chooserIntent = Intent.createChooser(intent, message);
-        }
-
-        startActivityForResult(chooserIntent, PICK_IMAGE);
-    }
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         switch (requestCode) {
-            case PICK_IMAGE:
-                if (resultCode == Activity.RESULT_OK) {
-                    if (data != null) {
-                        Uri pictureUri = data.getData();
-                        performCrop(pictureUri);
-                    } else {
-                        showToast(R.string.device_doesnt_support_capturing);
-                    }
-                }
-                break;
-
-            case PICTURE_CROP:
-                try {
-                    CropImage.ActivityResult result = CropImage.getActivityResult(data);
-                    if (resultCode == Activity.RESULT_OK) {
-                        Uri imageUri = result.getUri();
-
-                        Bitmap photo = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), imageUri);
-                        if (photo != null) {
-                            // Reduce picture resolution to 256x256
-                            mSelectedPhoto = changePictureResolution(photo, mDefaultPhotoDisplayWSize, mDefaultPhotoDisplayHSize);
-                            if (mSelectedPhoto != null) {
-                                adjustPhotoCompression();
-                            }
-                        }
-
-                    } else {
-                        showToast(R.string.crop_failed);
-                    }
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    showToast(R.string.crop_failed);
-                }
-                break;
-
             case PICK_CONTACT: {
                 if (resultCode == Activity.RESULT_OK) {
                     Uri uri = data.getData();
