@@ -1,20 +1,21 @@
 # Densor with NFC-based Energy Harvesting from a Smartphone
 
-<img src="images/densor_assembled.jpg" width="500">
+<img src="images/densor_assembled.jpg" width="800">
 
-This is the official public repository for Densor: An intraoral sensing platform.
+This is the official public repository for intraoral sensing platform, called Densor (a portmanteau of a word _dental_ and _sensor_), based on [NFC protocol](https://en.wikipedia.org/wiki/Near-field_communication) for energy harvesting and communication from a NFC-enabled smartphone. For a Densor version with thermoelectric energy harvesting from drinking cold water please refer to [this repository](https://github.com/TUDSSL/densor/tree/master/TEG_harvester_battery_free). 
 
 ## About the Project
 
-This repository contains the design of Densor: an intraoral, actively powered, battery-free platform featuring multi-modal sensors and an extended lifespan. The repository consists of all components that make Densor:
-- [Hardware](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware)
-- [Densor Firmware](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/software/DentalSensor_StorageProject)
+This repository contains the design files of NFC-based Densor:
+
+- [Densor hardware](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware)
+- [Densor firmware](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/software/DentalSensor_StorageProject)
 - [Android app](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/software/source_ST25NFCApplication_V3_9)
-- [Experiment setup and data collected](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data/experiments)
+- [Experiment setup and data collected from Densor evaluation](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data/experiments)
 
-## Rationale
+## Rationale behind Densor
 
-Intraoral sensors are becoming increasingly important in the field of healthcare and technology. While head-worn wearables have made significant advancements in monitoring various health metrics, placing sensors directly in the mouth remains a significant challenge. Currently, we rely heavily on external tools to gather dental and oral health data, which leaves critical information missing. For those looking to deploy in-mouth sensors, the process is daunting, requiring them to start from scratch. Additionally, there is no straightforward way to keep these sensors small, safe, and capable of long-lasting communication, making it difficult to integrate them into practical applications.
+Intraoral sensors are another type of sensors in the field of healthcare and technology. While head-worn wearables have made significant advancements in monitoring various health metrics, placing sensors directly in the mouth remains a challenge. Currently, we rely heavily on external tools to gather dental and oral health data, which leaves critical information missing. For those looking to deploy in-mouth sensors, the process is daunting, requiring them to start from scratch. Additionally, there is no straightforward way to keep these sensors small, safe, and capable of long-lasting communication, making it difficult to integrate them into practical applications.
 
 ## Challenges
 
@@ -22,47 +23,47 @@ Intraoral sensing is unique because it operates within one of the most dynamic a
 
 ## Densor Architecture
 
-<img src="images/densor_arch.png" width="1000">
+<img src="images/densor_arch.png" width="800">
 
 ### Communication and Data Storage
 
-Densor uses the NFC interface ([ST25DV64K](https://www.st.com/en/nfc/st25dv64k.html)) for communication with a smartphone, and the on board non-voltatile memory to store measurements. This way, the collected data is always available to be read out by the smartphone.
+Densor uses the NFC interface (based on STMicroelectronics' [ST25DV64K](https://www.st.com/en/nfc/st25dv64k.html) NFC/RFID tag IC) for communication with a smartphone, and the on board non-voltatile memory to store measurements. This way, data collected by Densor is always available to be read out by the smartphone.
 
 ### Energy Harvesting
 
-Energy is harvested from the NFC tag itself, and stored for later use. This allows for Densor's continous operation and reader-independant data collection.
+Energy is harvested from the NFC tag itself, and stored for later use. This allows for Densor's continous operation and reader-independent data collection.
 
 ### Energy Storage
 
-The harvested energy is stored on capacitors in place of batteries. This makes Densor a battery free device and much more safer and acceptable than potential toxic batteries.
+The harvested energy is stored on capacitors instead of batteries. This makes Densor a battery-free device and thus safer and more acceptable than Densor based on batteries.
 
 ### Power Control
 
-Despite using low-power sensors, energy would be drained from the storage capacitor(s) rapidly if Densor is kept continuously powered. As the harvested energy stored on the capacitors is limited, it is imperative that we save and expend this power carefully. To overcome this, we use a low power RTC [AB1805](https://abracon.com/Precisiontiming/AB18X5-RTC.pdf) with power switch for power management. This means that the MCU and sensors are completely powered off in the inter-sample period, with only the RTC powered to determine wake up time. This method achieves better power saving than deep-sleep or any of the low power run modes of the MCU.
+Despite using low-power sensors, energy would be drained from the storage capacitor(s) rapidly if Densor is kept continuously powered. As the harvested energy stored on the capacitors is limited, it is imperative that we save and expend this power carefully. To overcome this, we use a low power Real-Time Clock (RTC) [AB1805](https://abracon.com/Precisiontiming/AB18X5-RTC.pdf) with power switch for power management. This means that the microcontroller unit (MCU) and sensors are completely powered off in the inter-sample period, with only the RTC powered to determine wake up time. This method achieves better power saving than deep-sleep or any of the low power run modes of the MCU.
 
-### Sensors
+### Densor On-Board Sensors
 
-As of now, Densor includes three sensing modalities - temperature, accelaration and light intensity. Measuring oral temperature, jaw position, and whether the mouth is open using intraoral sensors is useful for gaining insight into oral and overall health. Oral temperature sensors provide accurate readings to detect early signs of fever and inflammation. Jaw position sensors can monitor alignment and movement, making them valuable for detecting sleep patterns. Light sensors that detect whether the mouth is open can help track breathing patterns and oral habits, which are essential for identifying issues like mouth breathing or sleep-related disorders.
+As of now, Densor includes three sensing modalities: temperature, accelaration and light intensity. Measuring oral temperature, jaw position, and whether the mouth is open using intraoral sensors is useful for gaining insight into oral and overall health. Oral temperature sensors provide accurate readings to detect early signs of fever and inflammation. Jaw position sensors can monitor alignment and movement, making them valuable for detecting sleep patterns. Light sensors that detect whether the mouth is open can help track breathing patterns and oral habits, which are essential for identifying issues like mouth breathing or sleep-related disorders.
 
-## Results and Performance
+## Densor Operation
 
-<img src="images/results_sensor_data.png" width="1000">
+<img src="images/results_sensor_data.png" width="800">
 
-The above image shows examples of data from Densor, and demonstrates its capabilities. The temperature can be seen rising to body temperature when Densor is inserted in the mouth. The light level falls when the mouth is closed, and rises when the mouth is open. It also varies when the user is speaking. When drinking cold water, the temperature initally falls and then rises back to body temperature. Densor can also determine the orientation of the jaw when the head is tilted. This is particularly useful for measuring head position during sleep as seen below.
+The above image shows examples of data collected by Densor and demonstrates its capabilities. The temperature can be seen rising to body temperature when Densor is inserted in the mouth. The light level falls when the mouth is closed, and rises when the mouth is open. It also varies when the user is speaking. When drinking cold water, the temperature initally falls and then rises back to body temperature.
 
-<img src="images/results_sleep_data.png" width="1000">
+<img src="images/results_sleep_data.png" width="800">
 
-The above image shows actual data collected from a user during a full night's sleep with 1 sample every 2 minutes. We can see the orientation of the head change between left, right and center as the user changes their sleep position.
+Densor can also determine the orientation of the jaw when the head is tilted. This is particularly useful for measuring head position during sleep, as seen in the above figure. The figure shows actual data collected from a user during a full night's sleep with _one sample collected every two minutes_. We can see the orientation of the head change between left, right and center as the user changes their sleep position.
 
-## Getting Started
+## Getting Started with Densor
 
 The long term goal of the Densor project is to lower the ceiling of development of intraoral sensors. Thus, we wish that everyone can build, use and even expand Densor to improve capabilities and data collection. Here we explain the steps to create Densor from scratch.
 
 ### Building the Densor Hardware
 
-<img src="images/densor_pcb_labelled.png" width="500">
+<img src="images/densor_pcb_labelled.png" width="800">
 
-The Densor PCB is built using off-the-shelf components and assembled onto a flexible PCB. We used the flex PCB services from [PCBway](https://www.pcbway.com/fpc-rigid-flex-pcb/flex-pcb.html). The picture above shows the main components of Densor, and a more comprehensive list along with links to buy them can be found under [Hardware](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware).
+The Densor printed circuit board (PCB) is built using off-the-shelf components and assembled onto a flexible PCB. We used the flex PCB services from [PCBway](https://www.pcbway.com/fpc-rigid-flex-pcb/flex-pcb.html). The picture above shows the main components of Densor, and a more comprehensive list along with links to buy them can be found under [Hardware](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware).
 
 - **A** PCB antenna
 - **B** [ST25DV64K](https://www.st.com/en/nfc/st25dv64k.html) NFC tag
@@ -89,7 +90,7 @@ Once the hardware is assembled, the STM32L021 MCU on board the densor needs to h
 
 ### Memory Layout and Pinout
 
-<img src="images/densor_bf_memmap.png" width="500">
+<img src="images/densor_bf_memmap.png" width="800">
 
 ### Using the App
 
@@ -212,4 +213,4 @@ We thank [Tofik Babayev](https://www.linkedin.com/in/tofik-babayev-36aa561a0) fr
 
 Copyright (C) 2024 TU Delft Embedded Systems Group/[Sustainable Systems Laboratory](https://github.com/TUDSSL).
 
-MIT Licence or otherwise specified. See [license](https://github.com/tudssl/densor/blob/master/license) file for details.
+MIT License or otherwise specified. See [license](https://github.com/tudssl/densor/blob/master/license) file for details.
