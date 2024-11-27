@@ -6,12 +6,12 @@ This is the official public repository for intraoral sensing platform, called De
 
 ## About the Project
 
-This repository contains the design files of NFC-based Densor:
+This repository contains the design files of the NFC-based Densor:
 
 - [Densor hardware](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware)
 - [Densor firmware](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/software/DentalSensor_StorageProject)
 - [Android app](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/software/source_ST25NFCApplication_V3_9)
-- [Experiment setup and data collected from Densor evaluation](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data/experiments)
+- [Experiment setup and data collected from Densor evaluation](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data/experiments) presented in Densor's [accompanying publciation](https://dl.acm.org/doi/10.1145/3699746).
 
 ## Rationale behind Densor
 
@@ -57,56 +57,56 @@ Densor can also determine the orientation of the jaw when the head is tilted. Th
 
 ## Getting Started with Densor
 
-The long term goal of the Densor project is to lower the ceiling of development of intraoral sensors. Thus, we wish that everyone can build, use and even expand Densor to improve capabilities and data collection. Here we explain the steps to create Densor from scratch.
+The long-term goal of the Densor project is to lower the ceiling of development of intraoral sensors. Thus, we wish that everyone can build, use and even expand Densor to improve sensing capabilities and data collection. Here we explain the steps to create Densor from scratch.
 
 ### Building the Densor Hardware
 
 <img src="images/densor_pcb_labelled.png" width="800">
 
-The Densor printed circuit board (PCB) is built using off-the-shelf components and assembled onto a flexible PCB. We used the flex PCB services from [PCBway](https://www.pcbway.com/fpc-rigid-flex-pcb/flex-pcb.html). The picture above shows the main components of Densor, and a more comprehensive list along with links to buy them can be found under [Hardware](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware).
+The Densor printed circuit board (PCB) is built using off-the-shelf components and assembled onto a flexible PCB. In our case we have used the flex PCB services from [PCBway](https://www.pcbway.com/fpc-rigid-flex-pcb/flex-pcb.html). The picture above shows the main components of Densor ( (a comprehensive list of Densor hardware, along with links to buy them, can be found under [Hardware](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware)).
 
-- **A** PCB antenna
-- **B** [ST25DV64K](https://www.st.com/en/nfc/st25dv64k.html) NFC tag
+- **A** Custom-designed PCB antenna
+- **B** STMicroelectronics [ST25DV64K](https://www.st.com/en/nfc/st25dv64k.html) NFC tag
 - **C** Seiko [CPH3225A](https://www.sii.co.jp/en/me/datasheets/chip-capacitor/cph3225a/) chip capacitor bank
 - **D** Abracon [AB1805](https://abracon.com/Precisiontiming/AB18X5-RTC.pdf) RTC
-- **E** [LIS2DW12](https://www.st.com/en/mems-and-sensors/lis2dw12.html) accelerometer
-- **F** [STM32L021F4](https://www.st.com/en/microcontrollers-microprocessors/stm32l021f4.html) MCU
-- **G** [VEMD1060X01](https://www.vishay.com/docs/84295/vemd1060x01.pdf) photodiode
-- **H** SWD programming port (which is cut off before embedding in a dental aligner).
+- **E** STMicroelectronics [LIS2DW12](https://www.st.com/en/mems-and-sensors/lis2dw12.html) accelerometer
+- **F** STMicroelectronics [STM32L021F4](https://www.st.com/en/microcontrollers-microprocessors/stm32l021f4.html) MCU
+- **G** Vishay [VEMD1060X01](https://www.vishay.com/docs/84295/vemd1060x01.pdf) photodiode
+- **H** Serial Wire Debug (SWD) programming port (which is cut off before embedding in a dental aligner).
 
-The **hardware** folder contains the [gerber files](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware/gerbers_schematic) which can be used to order the PCBs directly. To order directly, use the `.gbr` Gerber output files and `.drl` drill file for manufacturing.
+The [Densor hardware](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware) folder contains the [gerber files](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware/gerbers_schematic) which can be used to order the PCBs directly. To order directly, use the `.gbr` Gerber output files and `.drl` drill file for manufacturing.
 
-The hardware folder also contains the [schematic](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware/gerbers_schematic) and [KiCad](https://www.kicad.org/blog/2021/12/KiCad-6.0.0-Release/) project which can be used for further expansion or modifications of Densor. A screenshot of the Densor PCB design in KiCad can be seen below. To open the project using Kicad, launch Kicad and navigate to 'File' -> 'Open project' -> And choose the [densor_nfc_v2.kicad_pro](https://github.com/TUDSSL/densor/blob/master/NFC_harvester_battery_free/hardware/Densor_kicad_project/densor_nfc_v2.kicad_pro) project file. The project includes the KiCad project files `.kicad_pcb`, `.pro` and `.sch`.
+<img src="images/kicad_screenshot.png" width="800">
 
-<img src="images/kicad_screenshot.png" width="500">
+The hardware folder also contains Densor' [schematic](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware/gerbers_schematic) and [KiCad](https://www.kicad.org/blog/2021/12/KiCad-6.0.0-Release/) project which can be used for further expansion or modifications of Densor. A screenshot of the Densor PCB design in KiCad can be seen above. To open the project using Kicad, launch Kicad and navigate to 'File' -> 'Open project' -> And choose the [`densor_nfc_v2.kicad_pro`](https://github.com/TUDSSL/densor/blob/master/NFC_harvester_battery_free/hardware/Densor_kicad_project/densor_nfc_v2.kicad_pro) project file. The project includes the KiCad project files `.kicad_pcb`, `.pro` and `.sch`.
 
 With the PCB and components, we used the lead-free [SAC305](https://nl.mouser.com/datasheet/2/73/SMD291SNL250T3-595229.pdf) solder paste to assemble the Densor as per the schematic.
 
-### Uploading the Software
+### Uploading the Firmware to Densor's MCU
 
-Once the hardware is assembled, the STM32L021 MCU on board the densor needs to have the firmware uploaded. The [software folder](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/software/DentalSensor_StorageProject) contains the [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html) based project required for this. The program is uploaded using a [J-Link Debug probe](https://www.segger.com/products/debug-probes/j-link/) and 10-pin header.
+Once the Densor hardware is assembled, the [STM32L021F4](https://www.st.com/en/microcontrollers-microprocessors/stm32l021f4.html) MCU on board the Densor needs to have the firmware uploaded. The Densor [software folder](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/software/DentalSensor_StorageProject) contains the [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html)-based project is required for this. The firmware is uploaded using a [J-Link Debug probe](https://www.segger.com/products/debug-probes/j-link/) and a 10-pin header.
 
-**Note:** The current version of the PCB also has an [5034800800 FPC connector](https://www.molex.com/en-us/products/part-detail/5034800800) with all SWD signals which can also be used for programming.
+_Note:_ The current version of the PCB also has an [5034800800 FPC connector](https://www.molex.com/en-us/products/part-detail/5034800800) with all SWD signals which can also be used for programming.
 
 ### Memory Layout and Pinout
 
-<img src="images/densor_bf_memmap.png" width="800">
+<img src="images/densor_bf_memmap.png" width="400">
 
-### Using the App
+### Using the Densor Smartphone App
 
-With the software uploaded, the Densor is ready to use in principle. This can be verified with an android phone running the [smartphone application](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/software/source_ST25NFCApplication_V3_9) in the software folder. The app is built using Android Studio and can interact with the assembled Densor PCB via NFC. Detailed instructions on how to build the app can be found [here](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/software/source_ST25NFCApplication_V3_9). A screenshot of the app can be seen below.
+With the firmware uploaded to the MCU, the Densor is ready to be uses. This can be verified with an Android-based smartphone running the Densor [smartphone app](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/software/source_ST25NFCApplication_V3_9). The app (screenshot below) is built using Android Studio and can interact with the assembled Densor PCB via NFC. Detailed instructions on how to build the app can be found [here](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/software/source_ST25NFCApplication_V3_9).
 
-<img src="images/densor_app_screenshot.png" width="150">
+<img src="images/densor_app_screenshot.png" width="200">
 
 ### Attaching Densor to Aligners using Epoxy
 
 Finally, the Densor PCB has to be attached to the retiners or aligners. Clear plastic vaccum formed [retainers](https://en.wikipedia.org/wiki/Retainer_(orthodontics)) are widely used in orthodontic treatment. They can easily be fabricated with the help of a dental technician.
 
-In our implementation - first, a [dental impression](https://en.wikipedia.org/wiki/Dental_impression) of each test subject was taken using [condensation silicone](https://products.coltene.com/EN/US/products/prosthetics/c-silicones/speedex/speedex-putty) placed on a dental impression tray. The hardened impression was later used to create a [plaster model](https://bredent-group.com/wp-content/uploads/2020/06/gipse-von-hoechster-Qualitaet_000727GB-20150601.pdf) of the subject's lower jaw teeth. Next, the plaster was placed inside an [Erkoform-3d+ dental](https://www.erkodent.de/en/product/?id=521210) thermoforming unit. Then, a dental [thermoforming plate](https://www.erkodent.de/wp-content/documents/products/thermoprosp_EN.pdf) was heated to 160 degrees Celcius by Erkoform-3d+, placed over the dental plaster and vacuum sealed. After vacuum sealing, all redundant and sharp edges of the fabricated aligner were removed by the cut-off wheel. The remaining imperfections were removed with the same cut-off wheel, and finally disinfected.
+In our Densor fabrication process, first a [dental impression](https://en.wikipedia.org/wiki/Dental_impression) of each test subject was taken using [condensation silicone](https://products.coltene.com/EN/US/products/prosthetics/c-silicones/speedex/speedex-putty) placed on a dental impression tray. The hardened impression was later used to create a [plaster model](https://bredent-group.com/wp-content/uploads/2020/06/gipse-von-hoechster-Qualitaet_000727GB-20150601.pdf) of the subject's lower jaw teeth. Next, the plaster was placed inside an [Erkoform-3d+ dental  thermoforming unit](https://www.erkodent.de/en/product/?id=521210). Then, a dental [thermoforming plate](https://www.erkodent.de/wp-content/documents/products/thermoprosp_EN.pdf) was heated to 160 degrees Celcius by Erkoform-3d+, placed over the dental plaster and vacuum sealed. After vacuum sealing, all redundant and sharp edges of the fabricated aligner were removed by the cut-off wheel. The remaining imperfections were removed with the same cut-off wheel, and finally disinfected.
 
-We used a [food safe epoxy](https://polyestershoppen.com/epoxy/voedselveilige-epoxy-419.html) to attach the assembled Densor PCB to the retainers. The epoxy has to be carefully mixed in a 10:6 ratio of resin and hardner, and applied over the PCB with a brush. The epoxy takes a full 5 days to cure completely and must not be used before that even though it appears to have hardened.
+We used a [food safe epoxy](https://polyestershoppen.com/epoxy/voedselveilige-epoxy-419.html) to attach the assembled Densor PCB to the retainers. The epoxy has to be carefully mixed in a 10:6 ratio of resin and hardner, and applied over the PCB with a brush. The epoxy takes a _full five days to cure completely_ and must not be used before that even though it appears to have hardened.
 
-Once fully cured, Voila! Densor is ready to use!
+**Once the epoxy is fully cured, Voila! You Densor is ready to use**.
 
 ## How to Operate Densor
 
@@ -114,35 +114,35 @@ To use Densor, begin with the smartphone app, and fully assembled Densor.
 
 ### Starting and Stopping Densor
 
-1. When you hold Densor close to the smartphone such that both NFC antennas align, the app will launch automatically and Densor will begin charging.
+_Step 1._ When you hold Densor close to the smartphone such that both NFC antennas of a Densor and a smartphone align, the app will launch automatically and Densor will begin charging.
 
-2. The capacitor's charged voltage will be displayed in the app. While Densor theoretically supports 3.3V, in practice, it reaches about 2.6V.
+_Step 2._ The capacitor's charged voltage will be displayed in the app. While Densor theoretically supports 3.3 V maximum capacitor voltage, in practice, it reaches about 2.6 V.
 
-3. To configure the sensor, go to the settings tab. Here, you can enable specific sensors, select the sampling rate, and set an optional delayed start. Click the `Update` button to apply these settings to the sensor.
+_Step 3._ To configure the on-board Densor sensors, go to the settings tab. Here, you can enable specific sensors, select the sampling rate, and set an optional delayed start. Click the `Update` button to apply these settings to the sensor.
 
-4. The Densor will only begin measuring once the time is synced. In the `Time Sync` tab, click the `Sync` button to start the sensor from the current time. The `Wipe` button deletes all previously collected data, while `Delete` resets the cursor without overwriting previous data with zeros.
+_Step 4._ The Densor will only begin measuring once the time is synced. In the `Time Sync` tab, click the `Sync` button to start the sensor from the current time. The `Wipe` button deletes all previously collected data, while `Delete` resets the cursor without overwriting previous data with zeros.
 
-5. To stop the sensor, switch to `Charge` mode. This will revert the sensor to showing feedback on the charging voltage reached. **Note:** This will also reset the timestamp. Please save measurements before putting Densor to charge mode.
+_Step 5._ To stop the sensor, switch to `Charge` mode. This will revert the sensor to showing feedback on the charging voltage reached. _Note:_ This will also reset the timestamp. Please save measurements before putting Densor to charge mode.
 
 ### Reading the Data
 
-1. To save the data, go to the `Memory` tab and click `Dump memory to file`. In the 'Destination folder' field, enter your desired file name, then click `OK`. The data will be saved as a `.bin` file on your phone. The file is located in the 'Downloads' folder of the internal memory.
+_Step 1._ To save the data, go to the `Memory` tab and click `Dump memory to file`. In the 'Destination folder' field, enter your desired file name, then click `OK`. The data will be saved as a `.bin` file on your phone. The file is located in the 'Downloads' folder of the internal memory.
 
-2. To analyse this data, use the scripts in the [data folder](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data) of this repository.
+_Step 2._ To analyse this data, use the provided scripts avaible in the [data folder](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data) of this repository.
 
-3. If the [experiment master](https://github.com/TUDSSL/densor/blob/master/NFC_harvester_battery_free/data/experiments/experiment_master_ui.py) script was used to generate the data as per a protocol, then place the generated `.bin` file in the [data dumps folder](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data/experiments/data_dumps), and view the results with the [plot_labelled.py](https://github.com/TUDSSL/densor/blob/master/NFC_harvester_battery_free/data/experiments/plot_labeled.py) script. Make sure to use the [environment](https://github.com/TUDSSL/densor/blob/master/NFC_harvester_battery_free/data/environment.yml) provided.
+_Step 3._ If the [experiment master](https://github.com/TUDSSL/densor/blob/master/NFC_harvester_battery_free/data/experiments/experiment_master_ui.py) script was used to generate the data as per a protocol, then place the generated `.bin` file in the [data dumps folder](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data/experiments/data_dumps), and view the results with the [plot_labelled.py](https://github.com/TUDSSL/densor/blob/master/NFC_harvester_battery_free/data/experiments/plot_labeled.py) script. Make sure to use the [environment](https://github.com/TUDSSL/densor/blob/master/NFC_harvester_battery_free/data/environment.yml) provided.
 
 ## Collecting New Data
 
-Data collected using data can be labelled and stored using the scripts in the [data folder](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data/experiments).
+Data collected using Densor can be labelled and stored using the scripts in the [data folder](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data/experiments).
 
-1. **Using a protocol:** You can use an [existing protocol](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data/experiments/experiment_protocols) or create a new `.json` file to decide the tasks that will be performed while using Densor for the labels.
-2. **Executing an experiemnt:** Run the [experiment_master_ui.py](https://github.com/TUDSSL/densor/blob/master/NFC_harvester_battery_free/data/experiments/experiment_master_ui.py) file to launch the instructing script. Perform the actions as instructed by the script for the prescribed duration.
+1. **Using a predefined experiment protocol:** You can use a set of [existing experiment protocols](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data/experiments/experiment_protocols) or create a new `.json` file to decide the tasks that will be performed while labeling data collected by Densor.
+2. **Executing an experiment:** Run the [`experiment_master_ui.py`](https://github.com/TUDSSL/densor/blob/master/NFC_harvester_battery_free/data/experiments/experiment_master_ui.py) file to launch the instructing script. Perform the actions as instructed by the script for the prescribed duration.
 
-<img src="images/ui_screenshot.png" width="500">
+<img src="images/ui_screenshot.png" width="600">
 
 3. **Save the data:** Save the data using the smartphone app with the name prompted by the script to a `.bin` file and place it in the [data_dumps](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/data/experiments/data_dumps) folder.
-4. **Label and view the data:** Run the `data_labeller.py` script to label the data for further ML tasks, or `plot_labelled.py` file to view the data.
+4. **Label and view the data:** Run the `data_labeller.py` script to label the data for further machine learning tasks, or `plot_labelled.py` file to view the data.
 
 ## Frequently Asked Questions
 
@@ -152,11 +152,11 @@ It takes approximately a minute to charge Densor using a smartphone. The exact c
 
 **2. How long does Densor run when fully charged?**
 
-Densor's lifetime depends on the sampling rate and number of capacitors used. For example, when using 2 capacitors and sampling once every 2 minutes - Densor lasts for about 7 hours. To increase the lifetime, more capacitors can be added. This will however change the charging behavior as well.
+Densor's lifetime depends on the sampling rate and number of capacitors used. For example, when using two capacitors and sampling once every two minutes Densor lasts for about 7 hours on a single charge. To increase the lifetime, more capacitors can be added. This will however change the charging behavior as well.
 
-**3. Is Densor comfortable?**
+**3. Is Densor comfortable to wear?**
 
-In our opinion, the experience of using Densor is no different than using retainers. Thus, if using retainers/aligners anyway, Densor should cause no additional discomfort than existing.
+In our opinion, the experience of using Densor is no different than using retainers. Thus, if using retainers/aligners anyway, Densor should cause no additional discomfort beyond usinh the retainer.
 
 **4. Will the mouth opening detection based on light intensity work when sleeping in the dark?**
 
@@ -164,7 +164,7 @@ Unfortunately, the mouth opening detection only works when there is sufficient a
 
 **5. Can I buy a Densor?**
 
-Densor can be built with the design files in _this repository_. We desire Densor to be a free open source platform that can be rebuilt and expanded by everyone. If you wish to use (or expand) for your own research, please do not hesitate to contact us. We are happy to assist reproduction efforts, and may be able to coordinate efforts.
+Densor can be built with the design files in _this repository_. We desire Densor to be a free open source platform that can be rebuilt and expanded by everyone. If you wish to use (or expand) for your own research, please do not hesitate to contact us. We are happy to assist in reproduction efforts.
 
 ## How to Contribute to this Project
 
@@ -181,7 +181,7 @@ List of all known issues is listed in the [Issues](https://github.com/TUDSSL/den
 
 ## How to Cite This Work
 
-The results of this project have been published in a peer-reviewed academic publication (from which certain technical figures in this file originate). Details of the publication are as follows.
+The results of this project have been published in a peer-reviewed academic publication (from which certain technical figures and text in this file originate). Details of the publication are as follows.
 
 * **Authors and the project team:** [Vivian Dsouza](https://www.linkedin.com/in/dsouzavivian), Jeffrey Pronk, [Christian Peppelman](https://www.linkedin.com/in/peppelmanc), [Víctor Ignacio Madariaga](https://www.linkedin.com/in/vignaciomr), [Tatiana Pereira-Cenci](https://www.linkedin.com/in/tatiana-pereira-cenci-78813118/), [Bas Loomans](https://www.linkedin.com/in/bas-loomans-370ba11/), [Przemysław Pawełczak](http://www.pawelczak.net/)
 * **Publication title:** _Densor: An Intraoral Battery-Free Sensing Platform_
