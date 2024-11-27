@@ -200,8 +200,6 @@ dependencies {
     implementation files('libs/st25sdk-1.10.0.jar')
     implementation project(':st25.android.reader.interface')
 
-    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
-
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
