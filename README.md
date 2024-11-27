@@ -29,4 +29,4 @@ This repository contains the design (both hardware and software) of two versions
 
 Copyright (C) 2024 TU Delft Embedded Systems Group/[Sustainable Systems Laboratory](https://github.com/TUDSSL).
 
-MIT Licence or otherwise specified. See [license](https://github.com/tudssl/densor/blob/master/license) file for details.
+MIT Licence or otherwise specified. See [license](https://github.com/TUDSSL/densor/blob/master/LICENSE.txt) file for details.
