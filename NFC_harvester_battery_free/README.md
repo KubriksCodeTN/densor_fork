@@ -212,4 +212,4 @@ We thank [Tofik Babayev](https://www.linkedin.com/in/tofik-babayev-36aa561a0) fr
 
 Copyright (C) 2024 TU Delft Embedded Systems Group/[Sustainable Systems Laboratory](https://github.com/TUDSSL).
 
-MIT Licence or otherwise specified. See [license](https://github.com/TUDSSL/ENGAGE/blob/master/LICENSE) file for details.
+MIT Licence or otherwise specified. See [license](https://github.com/tudssl/densor/blob/master/license) file for details.
