@@ -183,7 +183,7 @@ List of all known issues is listed in the [Issues](https://github.com/TUDSSL/den
 
 The results of this project have been published in a peer-reviewed academic publication (from which certain technical figures and text in this file originate). Details of the publication are as follows.
 
-* **Authors and the project team:** [Vivian Dsouza](https://www.linkedin.com/in/dsouzavivian), Jeffrey Pronk, [Christian Peppelman](https://www.linkedin.com/in/peppelmanc), [Víctor Ignacio Madariaga](https://www.linkedin.com/in/vignaciomr), [Tatiana Pereira-Cenci](https://www.linkedin.com/in/tatiana-pereira-cenci-78813118/), [Bas Loomans](https://www.linkedin.com/in/bas-loomans-370ba11/), [Przemysław Pawełczak](http://www.pawelczak.net/)
+* **Authors and the project team:** [Vivian Dsouza](https://www.linkedin.com/in/dsouzavivian), [Jeffrey Pronk](https://www.linkedin.com/in/jeffrey-p-ba3225332), [Christian Peppelman](https://www.linkedin.com/in/peppelmanc), [Víctor Ignacio Madariaga](https://www.linkedin.com/in/vignaciomr), [Tatiana Pereira-Cenci](https://www.linkedin.com/in/tatiana-pereira-cenci-78813118/), [Bas Loomans](https://www.linkedin.com/in/bas-loomans-370ba11/), [Przemysław Pawełczak](http://www.pawelczak.net/)
 * **Publication title:** _Densor: An Intraoral Battery-Free Sensing Platform_
 * **Pulication venue:** [Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, Volume 8, Issue 4, November 2024](https://dl.acm.org/toc/imwut/2024/8/4)
 * **Link to publication:** https://dl.acm.org/doi/10.1145/3699746 (Open Access)
