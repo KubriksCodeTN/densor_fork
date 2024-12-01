@@ -11,6 +11,12 @@ This repository contains the design of Densor: an intraoral, actively powered, b
 
 This folder contains all the harware design files.
 
+## Folder layout
+
+- [Densor Kicad Project](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware/Densor_kicad_project) contains the KiCad design files and can be opened with KiCad Version 8.
+- [Datasheets](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware/datasheets) contains the relavant datasheets of components used.
+- [Gerbers Schematic](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware/gerbers_schematic) contains the hardware output gerber files and schematic file in _.pdf_ format. This is useful if you wish to build Densor without any changes to the hardware.  
+
 ## List of components
 
 | Component                  | Qty | Purchased from                                                                                                                                                                                                            |
