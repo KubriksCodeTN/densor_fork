@@ -267,6 +267,7 @@ int I2CDeviceScan() {
 	uint8_t final_addr = 0;
 
 	/* ASSIGNMENT CODE BEGIN */
+	/*
 	__attribute__((unused)) HAL_StatusTypeDef resNfc = HAL_I2C_IsDeviceReady(&hi2c1, NFC_ADDR, 3, 5);
 	__attribute__((unused)) HAL_StatusTypeDef recRtc = HAL_I2C_IsDeviceReady(&hi2c1, AM1805_ADDR, 3, 5);
 	__attribute__((unused)) HAL_StatusTypeDef resAccel = HAL_I2C_IsDeviceReady(&hi2c1, ACCEL_ADDR, 3, 5);
@@ -274,6 +275,7 @@ int I2CDeviceScan() {
 	// I don't think this is needed as the loop below spans the whole address space, just like the three calls above
 	// I actually used the unshifted ADDR as a macro but this should be fine as the driver hides the ADDR anyway
 	__attribute__((unused)) HAL_StatusTypeDef resNewTemp = HAL_I2C_IsDeviceReady(&hi2c1, TMP117_ADDR << 1, 3, 5);
+	*/
 	/* ASSIGNMENT CODE END */
 
 	// is this scanning the whole address space?
