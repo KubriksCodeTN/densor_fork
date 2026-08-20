@@ -36,8 +36,7 @@ This folder contains all the harware design files.
 | MCU - STM32L021F3Ux        | 1   | [link to buy](https://www.digikey.nl/en/products/detail/stmicroelectronics/STM32L021F4U6TR/6166967)                                                                                                                       |
 | Accelerometer - LIS2DW12   | 1   | [link to buy](https://nl.farnell.com/en-NL/stmicroelectronics/lis2dw12tr/lga-12-i-mems-digital-o-p-motion/dp/2849615?st=LIS2DW12TR)                                                                                       |
 | SPDT - TS3A44159           | 1   | [link to buy](https://www.digikey.nl/en/products/detail/texas-instruments/TS3A44159RSVR/1909585)                                                                                                                          |
-| Temperature sensor - TMP117AIDRVR | 1  | [link to buy](https://www.mouser.it/en/ProductDetail/Texas-Instruments/TMP117AIDRVR?qs=qSfuJ%252Bfl%2Fd6nh9h5HydMXQ%3D%3D)
-                                                                                                |
+| Temperature sensor - TMP117AIDRVR | 1  | [link to buy](https://www.mouser.it/en/ProductDetail/Texas-Instruments/TMP117AIDRVR?qs=qSfuJ%252Bfl%2Fd6nh9h5HydMXQ%3D%3D) |
 | Crystal                    | 1   | [link to buy](https://nl.farnell.com/en-NL/abracon/abs05w-32-768khz-j-2-t/crystal-32-768khz-4pf-smd-1-6/dp/2850126?st=abs05w)                                                                                             |
 | Solder paste               | -   | [link to buy](https://www.digikey.nl/en/products/detail/chip-quik-inc/SMD291SNL50T3/5130160)                                                                                                                              |
 
