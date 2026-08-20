@@ -73,6 +73,7 @@ The Densor printed circuit board (PCB) is built using off-the-shelf components a
 - **F** STMicroelectronics [STM32L021F4](https://www.st.com/en/microcontrollers-microprocessors/stm32l021f4.html) MCU
 - **G** Vishay [VEMD1060X01](https://www.vishay.com/docs/84295/vemd1060x01.pdf) photodiode
 - **H** Serial Wire Debug (SWD) programming port (which is cut off before embedding in a dental aligner).
+- **I** TI [TMP117](https://www.ti.com/lit/ds/symlink/tmp117.pdf) temperature sensor
 
 The [Densor hardware](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware) folder contains the [gerber files](https://github.com/TUDSSL/densor/tree/master/NFC_harvester_battery_free/hardware/gerbers_schematic) which can be used to order the PCBs directly. To order directly, use the `.gbr` Gerber output files and `.drl` drill file for manufacturing.
 
